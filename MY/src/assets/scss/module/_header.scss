@@ -1,0 +1,182 @@
+header {
+    background-color: #4d4d4df7;
+    height: 96vh;
+    width: 100vw;
+    place-items: center;
+    display: none;
+    z-index: 99;
+    position: fixed;
+    top: 0;
+
+    &.active {
+        display: grid;
+        z-index: 99;
+        overflow-y: auto;
+    }
+
+    .header__inner {
+        width: 48%;
+        max-width: 660px;
+        margin: 0 auto;
+
+        &__about-campaign,
+        &__why-sake,
+        &__restaurants,
+        &__selected-sake {
+            &__menu-title {
+                display: block;
+                @include text(clamp(1.25rem, 0.523rem + 3.64vw, 2rem), 100%, 0, 600, $font-garamond, $color-white);
+                text-decoration: none;
+                transition: opacity .3s;
+
+                &:hover {
+                    opacity: .6;
+
+                }
+            }
+        }
+
+        &__restaurants,
+        &__selected-sake {
+            &__menu-title {
+                margin-bottom: 14px;
+            }
+
+            &__list__item {
+                transition: opacity .3s;
+
+                &:hover {
+                    opacity: .6;
+
+                }
+            }
+        }
+
+        &__why-sake {
+            margin-top: 36px;
+        }
+
+        &__restaurants {
+            margin-top: 60px;
+
+            &__list {
+                @include display-flex(row, space-between, flex-start);
+                flex-wrap: wrap;
+                row-gap: 20px;
+
+                &__item {
+                    width: 28%;
+                    display: block;
+                    @include text(18px, 100%, 0, 400, $font-poppins, $color-white);
+
+                    &:nth-child(3n + 2) {
+                        width: 33%;
+                    }
+                }
+            }
+        }
+
+        &__selected-sake {
+            margin-top: 80px;
+
+            &__list {
+                width: 66%;
+                @include display-flex(row, space-between, flex-start);
+                flex-wrap: wrap;
+                row-gap: 20px;
+
+                &__item {
+                    width: 48%;
+                    display: block;
+                    @include text(18px, 100%, 0, 400, $font-poppins, $color-white);
+
+                    &:nth-child(2n) {
+                        width: 52%;
+                    }
+                }
+            }
+        }
+    }
+
+    #menu-close-btn {
+        position: absolute;
+        top: 5%;
+        right: 3%;
+
+        img {
+            width: 50%;
+        }
+
+    }
+}
+
+#menu-open-btn {
+    position: fixed;
+    top: 5%;
+    left: 3%;
+
+    img {
+        width: 50%;
+    }
+
+}
+
+@include mq(w-768) {
+
+    header {
+        padding: 60px 0;
+
+        .header__inner {
+            width: 80%;
+            max-width: 660px;
+
+            &__why-sake {
+                margin-top: 24px;
+            }
+
+            &__restaurants {
+                margin-top: 24px;
+
+                &__list {
+
+                    &__item {
+                        width: 45%;
+                        @include text(18px, 120%, 0, 400, $font-poppins, $color-white);
+
+                        &:nth-child(3n + 2) {
+                            width: 45%;
+                        }
+                    }
+                }
+            }
+
+            &__selected-sake {
+
+                &__list {
+                    width: 100%;
+
+                    &__item {
+                        width: 45%;
+                        @include text(18px, 120%, 0, 400, $font-poppins, $color-white);
+
+                        &:nth-child(2n) {
+                            width: 45%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #menu-open-btn {
+        position: fixed;
+        top: 5%;
+        left: 3%;
+
+        img {
+            width: 25%;
+        }
+
+    }
+
+}

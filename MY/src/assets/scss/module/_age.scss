@@ -1,0 +1,68 @@
+.age {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    padding: 40px;
+
+    p,
+    a {
+        font-family: $font-poppins;
+    }
+
+
+    &__logo {
+        max-width: 151px;
+        height: auto;
+    }
+
+
+    &__inner {
+        display: grid;
+        height: calc(100% - 340px);
+        place-self: center;
+        justify-content: center;
+        align-content: center;
+
+
+        .btn__area {
+            width: 500px;
+            margin: 0 auto;
+            @include display-flex(row, space-between, center);
+
+        }
+    }
+}
+
+@include mq(w-768) {
+    .age {
+
+
+
+        &__logo {
+            max-width: 120px;
+            height: auto;
+        }
+
+
+        &__inner {
+            height: calc(100% - 120px);
+
+
+
+            .btn__area {
+                width: 100%;
+                @include display-flex(column, center, center);
+
+                &__btn {
+                    @include text(20px, 100%, 0, 500, $font-poppins, #333);
+
+                    &.yes {
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+
+        }
+    }
+
+}

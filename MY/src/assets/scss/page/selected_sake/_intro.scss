@@ -1,0 +1,48 @@
+.page__selected-sake {
+    .selected-sake__intro {
+        padding: 140px 0 90px;
+        background-color: $color-light-brown;
+
+        &__title {
+            margin-bottom: 22px;
+            @include text(36px, 100%, 0, 500, $font-garamond, #333);
+            text-align: center;
+
+        }
+
+        &__intro {
+            width: 62%;
+            max-width: 890px;
+            margin: 0 auto;
+            @include text(18px, 155%, 0, 500, $font-poppins, #333);
+            text-align: center;
+        }
+    }
+
+    .selected-sake__graphic {
+        @include display-1280;
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+}
+
+@include mq(w-768) {
+    .page__selected-sake {
+        .selected-sake__intro {
+            padding: 100px 0 60px;
+
+
+            &__intro {
+                width: 90%;
+                max-width: auto;
+            }
+        }
+
+        .selected-sake__graphic {
+            @include display-100sp;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+    }
+
+}

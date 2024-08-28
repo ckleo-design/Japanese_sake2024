@@ -1,0 +1,204 @@
+.individual-sake {
+    .individual-sake__inner {
+        @include display-1280;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        @include display-flex(row, space-between, stretch);
+        height: 100%;
+
+        &__left {
+            width: 47%;
+
+            &__image {
+                width: 96%;
+                margin: 0 auto;
+            }
+
+            &__label {
+                margin-top: 50px;
+                border-top: 6px double #b2b2b2;
+                border-bottom: 6px double #b2b2b2;
+
+                &_row {
+                    padding: 10px 16px;
+                    @include display-flex(row, flex-start, center);
+
+                    &:not(:last-child) {
+                        border-bottom: 1px solid #b2b2b2;
+                    }
+
+                    &_title {
+                        width: 43%;
+                        @include text(16px, 100%, 0, 700, $font-poppins, #333);
+                    }
+
+                    &_content {
+                        @include text(16px, 100%, 0, 500, $font-poppins, #333);
+                    }
+                }
+            }
+        }
+
+        &__right {
+            width: 47%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+
+            &__detail {
+
+                &__name {
+                    margin-bottom: 16px;
+                    @include text(36px, 120%, 0, 600, $font-garamond, #333);
+                }
+
+                &__maker {
+                    margin-bottom: 10px;
+                    @include text(16px, 100%, 0, 200, $font-poppins, #333);
+                }
+
+                &__line {
+                    margin-bottom: 10px;
+                    display: block;
+                    height: 2px;
+                    background: url(../images/page/selected-sake/individual-sake-line.png) 0 0 no-repeat;
+                    background-size: contain;
+                }
+
+                &__content {
+                    @include text(16px, 150%, 0, 400, $font-poppins, #333);
+                }
+            }
+
+            &__about {
+                background-color: $color-light-brown;
+                padding: 26px;
+
+                &__title {
+                    margin-bottom: 10px;
+                    @include text(16px, 100%, 0, 700, $font-poppins, #333);
+                }
+
+                &__content {
+                    @include text(16px, 150%, 0, 400, $font-poppins, #333);
+                }
+            }
+        }
+    }
+
+
+    &__buy {
+        background-color: #333333;
+        @include text(30px, 100%, 0, 500, $font-garamond, $color-white);
+        text-align: center;
+        padding: 16px 100px;
+        width: 60%;
+        max-width: 600px;
+        display: block;
+        margin: 60px auto 0;
+        border-radius: 34px;
+        text-decoration: none;
+
+        &:after {
+            content: "";
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background: url(../images/alink-icon.png) 0 0 no-repeat;
+            background-size: contain;
+            transform: translate(10px, 10px);
+        }
+
+        &.tel {
+            padding: 16px 0px;
+
+            &:after {
+                background: none;
+            }
+        }
+    }
+
+    &__buttonlist {
+        @include display-flex(row, center, center);
+
+        &__back,
+        &__menu {
+            @include text(22px, 120%, 0, 500, $font-garamond, #333);
+            margin: 0 14px;
+            text-align: center;
+        }
+
+        &__line {
+            margin: 20px 0;
+            height: 30px;
+            width: 1px;
+            background-color: #333;
+        }
+    }
+}
+
+
+@include mq(w-768) {
+    .individual-sake {
+        .individual-sake__inner {
+            @include display-100sp;
+            @include display-flex(column, center, center);
+
+            &__left {
+                width: 100%;
+                margin-bottom: 40px;
+
+
+                &__label {
+
+                    &_row {
+                        @include display-flex(column, flex-start, center);
+
+
+                        &_title {
+                            width: 100%;
+                            margin-bottom: 12px;
+                            text-align: center;
+                        }
+
+                        &_content {
+                            width: 100%;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+
+            &__right {
+                width: 100%;
+
+
+                &__detail {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+
+        &__back {
+            @include text(18px, 100%, 0, 500, $font-garamond, $color-white);
+            width: 90%;
+            min-width: auto;
+        }
+
+        &__buy {
+            @include text(26px, 100%, 0, 500, $font-garamond, $color-white);
+            padding: 16px 10px;
+            width: 90%;
+            max-width: auto;
+
+            &:after {
+                width: 15px;
+                height: 15px;
+                transform: translate(10px, 0px);
+            }
+
+        }
+    }
+
+}

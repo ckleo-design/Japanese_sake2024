@@ -1,0 +1,110 @@
+.event {
+    background-color: $color-light-brown;
+
+    padding-top: 120px;
+    padding-bottom: 150px;
+
+    &__title {
+        margin-bottom: 14px;
+        @include text(54px, 100%, 0, 600, $font-garamond, $color-black);
+        text-align: center;
+
+        span {
+            @include text(54px, 100%, 0, 800, $font-poppins, $color-black);
+        }
+    }
+
+    &__date {
+        margin-bottom: 20px;
+        @include text(33px, 100%, 0, 400, $font-garamond, $color-black);
+        text-align: center;
+    }
+
+    &__intro__title {
+        margin-bottom: 10px;
+        @include text(19px, 100%, 0, 600, $font-poppins, $color-black);
+        text-align: center;
+    }
+
+    &__intro__detail {
+        margin-bottom: 60px;
+        @include text(15px, 150%, 0, 400, $font-poppins, $color-black);
+        text-align: center;
+    }
+
+    &__link-list {
+        @include display-1280;
+        @include display-flex(row, space-between, stretch);
+
+        &__block {
+            width: 31.2%;
+            text-decoration: none;
+            transition: opacity .3s;
+
+            &:hover {
+                opacity: .6;
+
+            }
+
+            img {
+                aspect-ratio: 1/1;
+            }
+
+            p {
+                background-color: $color-black;
+                padding: 28px 0 30px;
+                @include text(clamp(1.75rem, 1.821rem + -0.36vw, 1.5rem), 100%, 0, 600, $font-garamond, $color-white);
+                text-align: center;
+            }
+        }
+    }
+
+}
+
+@include mq(w-768) {
+    .event {
+
+        padding-top: 80px;
+        padding-bottom: 80px;
+
+        &__title {
+            @include text(40px, 100%, 0, 600, $font-garamond, $color-black);
+            text-align: center;
+
+            span {
+                @include text(44px, 100%, 0, 800, $font-poppins, $color-black);
+            }
+        }
+
+        &__date {
+            padding: 0 20px;
+            @include text(28px, 100%, 0, 400, $font-garamond, $color-black);
+        }
+
+        &__intro__title {
+            line-height: 120%;
+        }
+
+        &__intro__detail {
+            padding: 0 20px;
+        }
+
+        &__link-list {
+            @include display-100sp;
+            @include display-flex(column, center, center);
+            row-gap: 10px;
+
+            &__block {
+                width: 100%;
+
+
+                img {
+                    aspect-ratio: 5/3;
+                    object-fit: cover;
+                }
+            }
+        }
+
+    }
+
+}

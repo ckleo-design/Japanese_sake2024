@@ -1,0 +1,126 @@
+footer {
+    .footer__link {
+        background-color: $color-red;
+        padding: 92px 0;
+
+        &__inner {
+            @include display-1280;
+            @include display-flex(row, space-between, flex-start);
+
+            &__block {
+                width: 48.3%;
+                max-height: 345px;
+                aspect-ratio: 16/9;
+                background-color: #333;
+                display: grid;
+                place-items: center;
+
+                &.footer__why-sake {
+                    background: url(../../assets/images/footer-why-sake-bg.png) 50% 50% no-repeat;
+                    background-size: cover;
+                }
+
+                &.footer__restaurants {
+                    background: url(../../assets/images/footer-restaurants-bg.png) 50% 50% no-repeat;
+                    background-size: cover;
+
+                }
+
+                &.footer__selected {
+                    background: url(../../assets/images/footer-selected-bg.png) 50% 50% no-repeat;
+                    background-size: cover;
+
+                }
+
+                &.footer__about {
+                    background: url(../../assets/images/footer-about-bg.png) 50% 50% no-repeat;
+                    background-size: cover;
+
+                }
+
+                a {
+                    text-decoration: none;
+
+                    p {
+                        @include text(36px, 100%, 0, 500, $font-garamond, $color-white);
+                    }
+
+                    img {
+                        display: block;
+                        width: 51px;
+                        height: auto;
+                        margin: 30px auto 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer__inner {
+        padding-top: 64px;
+        padding-bottom: 30px;
+        padding-right: 30px;
+        background: url(../images/footer-border.png)20px 0 repeat-x;
+        background-size: auto 180px;
+        @include display-flex(column, center, flex-end);
+
+        &__logo {
+            width: 178px;
+            margin: 12px 0 30px;
+        }
+
+        &__content {
+            @include text(14px, 20px, 0, 500, $font-poppins, $color-black);
+
+            &.p-strong {
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+
+@include mq(w-768) {
+    footer {
+        .footer__link {
+            background-color: $color-red;
+            padding: 92px 0;
+
+            &__inner {
+                @include display-100sp;
+                @include display-flex(column, center, center);
+                row-gap: 10px;
+
+                &__block {
+                    width: 100%;
+                    display: grid;
+                    place-items: center;
+
+
+                    a {
+
+                        p {
+                            @include text(36px, 100%, 0, 500, $font-garamond, $color-white);
+                            text-align: center;
+                        }
+
+                        img {
+                            margin: 12px auto 0;
+
+                        }
+                    }
+                }
+            }
+        }
+
+        .footer__inner {
+
+
+            &__content {
+                padding-left: 10px;
+                text-align: right;
+            }
+        }
+    }
+
+}

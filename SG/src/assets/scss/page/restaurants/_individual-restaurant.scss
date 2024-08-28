@@ -1,0 +1,320 @@
+.individual-restaurant {
+    &__firstview {
+        &__logo {
+            display: block;
+            width: 50%;
+            max-width: 600px;
+            margin: 55px auto;
+        }
+
+        &__restaurant-name {
+            margin-bottom: 20px;
+            @include text(62px, 100%, 0, 600, $font-garamond, $color-black);
+            text-align: center;
+        }
+
+        &__campaign-period {
+            @include text(28px, 100%, 0, 600, $font-garamond, $color-black);
+            text-align: center;
+        }
+    }
+
+    &__pairing {
+        @include display-980;
+        @include display-flex(row, space-between, flex-start);
+        margin-top: 50px;
+        margin-bottom: 120px;
+
+        &__block {
+            width: 47%;
+
+            &__label {
+                @include display-flex(column, center, center);
+                position: relative;
+                margin-top: 34px;
+                margin-bottom: 24px;
+
+                &__detail {
+                    padding: 12px 100px;
+                    @include text(26px, 100%, 0, 600, $font-garamond, $color-white);
+                    text-align: center;
+                    width: fit-content;
+                    background-color: #333333;
+                    position: relative;
+                    z-index: 10;
+
+                    &::after,
+                    &::before {
+                        content: "";
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 50%;
+                        background-color: #333;
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-15px);
+                    }
+
+                    &::before {
+                        left: -15px;
+                    }
+
+                    &::after {
+                        right: -15px;
+                    }
+                }
+
+                &__line {
+                    width: 100%;
+                    height: 1px;
+                    background-color: #333;
+                    position: absolute;
+                    top: 50%;
+                    z-index: 0;
+                }
+            }
+
+            &__menu {
+
+
+                &__item {
+                    width: 100%;
+                    margin: 0 auto;
+                    @include text(28px, 117%, 0, 600, $font-garamond, #333);
+                    text-align: center;
+                }
+
+                &__line {
+                    display: block;
+                    width: 50px;
+                    margin: 12px auto;
+                }
+
+                &__detail {
+                    margin-top: 24px;
+                    @include text(18px, 155%, 0, 400, $font-poppins, #333);
+                }
+
+                &__alink {
+                    display: block;
+                    margin-top: 6px;
+                    @include text(18px, 100%, 0, 400, $font-garamond, #1a0dab);
+                    font-style: italic;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    &__information {
+        background-color: $color-light-brown;
+        padding-top: 64px;
+        padding-bottom: 64px;
+
+        &__inner {
+            @include display-980;
+            @include display-flex(row, space-between, center);
+
+            &__image {
+                width: 47%;
+            }
+
+            &__content {
+                width: 47%;
+
+                &__tag {
+                    padding: 4px 6px;
+                    display: inline-block;
+                    @include text(14px, 100%, 0, 400, $font-poppins, #333);
+                    border: 1px solid #333;
+                    margin-bottom: 16px;
+                }
+
+                &__name {
+                    margin-bottom: 6px;
+                    @include text(24px, 110%, 0, 600, $font-garamond, #333);
+                }
+
+                &__address {
+                    margin-bottom: 6px;
+                    @include text(18px, 120%, 0, 400, $font-garamond, #333);
+                }
+
+                &__tel {
+                    margin-bottom: 6px;
+                    @include text(18px, 120%, 0, 400, $font-garamond, #333);
+                }
+
+                &__alink {
+                    @include text(18px, 100%, 0, 500, $font-garamond, #1a0dab);
+                }
+
+                &__detail {
+                    margin-top: 36px;
+                    @include text(18px, 155%, 0, 400, $font-poppins, #333);
+                }
+            }
+        }
+    }
+
+    &__chef {
+        padding-top: 70px;
+
+        &__inner {
+            width: 980px;
+            margin: 0 auto;
+            padding: 34px 40px;
+            @include display-flex(row, space-between, center);
+            border: 1px solid #dcc89b;
+
+            &__content {
+                width: 74%;
+
+                &__name {
+                    @include text(24px, 100%, 0, 600, $font-garamond, #333);
+                }
+
+                &__detail {
+                    margin-top: 20px;
+                    @include text(16px, 155%, 0, 500, $font-poppins, #333);
+                }
+            }
+
+            &__image {
+                width: 23.5%;
+            }
+        }
+    }
+
+    &__reservation {
+        background-color: #333333;
+        @include text(30px, 100%, 0, 500, $font-garamond, $color-white);
+        text-align: center;
+        padding: 16px 100px;
+        width: 60%;
+        max-width: 600px;
+        display: block;
+        margin: 60px auto 90px;
+        border-radius: 34px;
+        text-decoration: none;
+
+        &:after {
+            content: "";
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background: url(../images/alink-icon.png) 0 0 no-repeat;
+            background-size: contain;
+            transform: translate(10px, 10px);
+        }
+
+        &.tel {
+            padding: 16px 0px;
+
+            &:after {
+                background: none;
+            }
+        }
+    }
+}
+
+
+@include mq(w-768) {
+    .individual-restaurant {
+        &__firstview {
+            &__logo {
+                width: 80%;
+                max-width: 600px;
+            }
+
+            &__restaurant-name {
+                margin-bottom: 10px;
+                font-size: 50px;
+                padding: 0 20px;
+            }
+
+            &__campaign-period {
+                font-size: 18px;
+                padding: 0 10px;
+            }
+        }
+
+        &__pairing {
+            @include display-100sp;
+            @include display-flex(column, center, center);
+            margin-top: 50px;
+            margin-bottom: 80px;
+
+            &__block {
+                width: 100%;
+
+                &:first-child {
+                    margin-bottom: 50px;
+                }
+
+
+
+
+            }
+        }
+
+        &__information {
+            padding-top: 34px;
+            padding-bottom: 34px;
+
+            &__inner {
+                @include display-100sp;
+                @include display-flex(column, center, flex-start);
+
+                &__image {
+                    width: 100%;
+                    margin-bottom: 30px;
+                }
+
+                &__content {
+                    width: 100%;
+
+                }
+            }
+        }
+
+        &__chef {
+            padding-top: 70px;
+
+            &__inner {
+                width: 90%;
+                margin: 0 auto;
+                @include display-flex(column, center, center);
+
+                &__content {
+                    width: 100%;
+                    order: 1;
+                }
+
+                &__image {
+                    order: 0;
+                    width: 50%;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+
+        &__reservation {
+            background-color: #333333;
+            @include text(22px, 100%, 0, 500, $font-garamond, $color-white);
+            text-align: center;
+            padding: 16px 10px;
+            width: 90%;
+            max-width: auto;
+            margin: 30px auto 60px;
+            border-radius: 36px;
+
+            &:after {
+                width: 20px;
+                height: 20px;
+                transform: translate(10px, 4px);
+            }
+        }
+    }
+
+}

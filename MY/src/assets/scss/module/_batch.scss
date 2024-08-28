@@ -1,0 +1,33 @@
+.event-btn {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 90px;
+    right: 6%;
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+}
+
+@include mq(w-1280) {
+    .event-btn {
+        width: calc(200 / 1280) * 100vw;
+        min-width: 144px;
+        height: auto;
+    }
+}
+@include mq(w-768) {
+    .event-btn {
+        width: 32vw;
+        max-width: 160px;
+        min-width: auto;
+        height: auto;
+        top: auto;
+        bottom: 50px;
+        right: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}

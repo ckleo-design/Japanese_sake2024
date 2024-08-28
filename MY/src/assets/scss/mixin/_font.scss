@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+$font-poppins :'Poppins',
+sans-serif;
+$font-garamond :'EB Garamond',
+serif;
+$font-kozuka :'Kozuka Gothic Pr6N';
+
+@mixin text($font-size, $font-lineheight, $spacing, $font-weight, $font-family, $color) {
+    font-size: $font-size;
+    line-height: $font-lineheight;
+    letter-spacing: $spacing;
+    font-weight: $font-weight;
+    font-family: $font-family;
+    color: $color;
+}

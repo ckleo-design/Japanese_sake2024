@@ -1,0 +1,55 @@
+.page__why-sake,
+.page__restaurants,
+.page__selected-sake {
+    .firstview {
+        &__inner {
+            @include display-flex(row, flex-end, center);
+
+            &__title {
+                width: 50%;
+                margin-top: 120px;
+                @include text(50px, 100%, 0, 600, $font-garamond, $color-black);
+                text-align: center;
+
+                span {
+                    display: block;
+                    margin-top: 30px;
+                    @include text(24px, 133%, 0, 400, $font-garamond, $color-black);
+                }
+
+            }
+
+            &__image {
+                width: 50%;
+            }
+        }
+    }
+}
+
+@include mq(w-768) {
+
+    .page__why-sake,
+    .page__restaurants,
+    .page__selected-sake {
+        .firstview {
+            &__inner {
+                @include display-flex(column, center, center);
+
+                &__title {
+                    width: 90%;
+
+                    span {
+                        width: 100%;
+                        font-size: 20px;
+                    }
+
+                }
+
+                &__image {
+                    margin-top: 30px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

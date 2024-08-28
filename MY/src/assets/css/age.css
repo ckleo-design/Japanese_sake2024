@@ -1,0 +1,408 @@
+/*
+ ============================================================
+  age
+ ============================================================
+*/
+
+.age {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  padding: 40px;
+  padding-bottom: 0;
+  background-image: url(../img/age_bg.jpg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+.age .logo {
+  text-align: left;
+}
+
+.age .logo+p {
+  margin-top: 100px;
+}
+
+.age p span {
+  color: #f2000a;
+  font-weight: 700;
+}
+
+.age p {
+  font-size: 22px;
+  line-height: 1.4;
+  font-family: "Poppins",
+    sans-serif;
+  font-style: normal;
+  margin-bottom: 48px;
+}
+
+.age .btn {
+  display: inline-block;
+  font-size: 20px;
+}
+
+.age .btn .a {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  line-height: 1;
+  cursor: pointer;
+  width: 240px;
+  height: 56px;
+}
+
+.age .btn.no .a {
+  color: #000;
+  background: #fff;
+  border: solid 1px #000;
+  font-family: "Poppins",
+    sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.age .btn.yes {
+  margin-left: 16px;
+}
+
+.age .btn.yes .a {
+  color: #fff;
+  border: solid 1px #000;
+  background: red;
+  font-family: "Poppins",
+    sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.form {
+  margin-top: 30px;
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  pointer-events: auto;
+}
+
+.form input[type=checkbox] {
+  display: none;
+}
+
+.form .checkbox {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+.form .checkbox .label::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  border: solid 1px #000;
+  background-color: #fff;
+  -webkit-transition: opacity .2s ease-out;
+  transition: opacity .2s ease-out;
+  margin-top: 2px;
+}
+
+.form .checkbox .label::after {
+  display: none;
+  content: "";
+  position: absolute;
+  top: .2em;
+  left: .4em;
+  -webkit-transform: rotate(50deg);
+  -ms-transform: rotate(50deg);
+  transform: rotate(45deg);
+  width: 5px;
+  height: 10px;
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000;
+}
+
+.form .checkbox input[type=checkbox]:checked+.label::after {
+  display: block;
+}
+
+.form .checkbox .label {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-left: 30px;
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  z-index: 100;
+  display: none;
+}
+
+.modal_in {
+  position: absolute;
+  left: 32px;
+  top: 32px;
+  right: 32px;
+  bottom: 32px;
+  border: solid 1px #000;
+}
+
+.modal_cnts {
+  position: absolute;
+  left: 32px;
+  top: 128px;
+  right: 32px;
+  bottom: 128px;
+  overflow: auto;
+  padding: 0 136px;
+}
+
+.age_modal .modal_cnts {
+  text-align: center;
+  top: 50%;
+}
+
+.modal_close {
+  position: absolute;
+  right: 32px;
+  top: 32px;
+  width: 64px;
+  height: 64px;
+  background: #111;
+  font-size: 0;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.modal_close::before,
+.modal_close::after {
+  content: "";
+  width: 50px;
+  height: 1px;
+  background: #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -25px;
+}
+
+.modal_close::before {
+  transform: rotate(45deg);
+}
+
+.modal_close::after {
+  transform: rotate(-45deg);
+}
+
+@media screen and (max-width: 768px) {
+  .age {
+    text-align: left;
+    padding: 30px;
+    background-size: 150%;
+  }
+
+  .age p {
+    font-size: 20px;
+  }
+
+  .age p.or {
+    display: block;
+    text-align: center;
+    padding: 2px 0;
+    margin-bottom: 0;
+  }
+
+  .age article {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .age .logo {
+    width: 28%;
+  }
+
+  .age .logo+p {
+    margin-top: 57px;
+    margin-bottom: 24px;
+    font-size: 20px;
+  }
+
+  .age .btn {
+    font-size: 16px;
+    display: inline-table;
+    width: 100%;
+  }
+
+  .age .btn+.btn {
+    margin-top: 4px;
+    margin-left: 0;
+  }
+
+  .age .btn .a {
+    width: 100%;
+  }
+
+  .age .btn.no a {
+    height: 56px;
+  }
+
+  .age .btn.yes {
+    margin-left: 0;
+  }
+
+  .age .btn.yes a {
+    height: 56px;
+  }
+
+  .form .checkbox .label {
+    font-size: 12px;
+  }
+
+  .form .checkbox .label {
+    font-size: 12px;
+    line-height: 24px;
+  }
+
+  .modal_cnts {
+    padding: 0;
+    left: 10px;
+    top: 68px;
+    right: 10px;
+    bottom: 20px;
+  }
+
+  .age_modal .modal_cnts p {
+    font-size: 14px;
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  .age_modal .modal_cnts {
+    padding: 10px;
+  }
+
+  .modal_close {
+    width: 40px;
+    height: 40px;
+  }
+
+  .form .checkbox .label::before {
+    margin-top: 3px;
+  }
+
+  .form .checkbox .label::after {
+    top: .3em;
+  }
+
+  .modal_close::before,
+  .modal_close::after {
+    width: 20px;
+    margin-left: -10px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .age {
+    background-size: 120%;
+  }
+}
+
+
+/*
+ ============================================================
+  cookie
+ ============================================================
+*/
+
+a.cookie {
+  text-decoration: underline;
+}
+
+
+/*
+ ============================================================
+  privacy
+ ============================================================
+*/
+
+.privacy h1 {
+  font-family: acumin-pro, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 32px;
+}
+
+.privacy ol {
+  font-size: 20px;
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+}
+
+.privacy ol li {
+  padding-left: 5rem;
+  text-indent: -5rem;
+}
+
+.privacy ol li span {
+  padding-right: 4rem;
+  font-family: acumin-pro, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.privacy ol li.list {
+  text-indent: -9rem;
+  margin-left: 3rem;
+}
+
+.privacy ol li.list:before {
+  content: "・";
+  padding-left: 8rem;
+}
+
+.privacy *+* {
+  margin-top: 50px;
+}
+
+.privacy *+li.list {
+  margin-top: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .privacy {
+    padding: 20px;
+    padding-top: 0;
+  }
+
+  .privacy h1 {
+    font-size: 20px;
+  }
+
+  .privacy ol {
+    font-size: 14px;
+  }
+
+  .privacy *+* {
+    margin-top: 24px;
+  }
+
+  .privacy ol li {
+    padding-left: 2rem;
+    text-indent: -2rem;
+  }
+
+  .privacy ol li span {
+    padding-right: 1.5rem;
+  }
+
+  .privacy ol li.list {
+    margin-left: 2rem;
+  }
+}

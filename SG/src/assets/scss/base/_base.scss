@@ -1,0 +1,59 @@
+body {
+    background-color: $color-white;
+    font-size: 16px;
+    line-height: 1em;
+    color: $color-black;
+    letter-spacing: 0;
+    scroll-behavior: smooth;
+
+    #page-top {
+        transition: opacity .5s;
+        width: 54px;
+        position: fixed;
+        bottom: 180px;
+        right: 1vw;
+        opacity: 0;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    #page-top.UpMove {
+        animation: UpAnime 0.5s forwards;
+    }
+
+    @keyframes UpAnime {
+        from {
+            opacity: 0;
+            transform: translateY(240px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /*　下に下がる動き　*/
+
+    #page-top.DownMove {
+        animation: DownAnime 0.5s forwards;
+    }
+
+    @keyframes DownAnime {
+        from {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(240px);
+        }
+    }
+
+    @include mq(w-768) {
+        margin: 0;
+    }
+}

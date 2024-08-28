@@ -1,0 +1,54 @@
+.about-campaign {
+    background-color: $color-red;
+    padding-top: 180px;
+    padding-bottom: 174px;
+
+    &__inner {
+        @include display-1280;
+        @include display-flex(row, space-between, center);
+
+        &__title {
+            width: 47%;
+            @include text(50px, 100%, 0, 600, $font-garamond, $color-white);
+            text-align: center;
+
+            span {
+                margin-top: 30px;
+                @include text(24px, 100%, 0, 400, $font-garamond, $color-white);
+            }
+
+        }
+
+        &__detail {
+            width: 52%;
+            @include text(18px, 150%, 0, 500, $font-poppins, $color-white);
+        }
+    }
+}
+
+@include mq(w-768) {
+    .about-campaign {
+        padding-top: 80px;
+        padding-bottom: 74px;
+
+        &__inner {
+            @include display-100sp;
+            @include display-flex(column, center, center);
+
+            &__title {
+                margin-bottom: 40px;
+                width: 100%;
+
+                span {
+                    @include text(18px, 100%, 0, 400, $font-garamond, $color-white);
+                }
+
+            }
+
+            &__detail {
+                width: 100%;
+            }
+        }
+    }
+
+}
