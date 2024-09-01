@@ -13,7 +13,7 @@
 
 @include mq(w-1280) {
     .event-btn {
-        width: calc(200 / 1280) * 100vw;
+        width: calc(200 / 1280);
         min-width: 144px;
         height: auto;
     }

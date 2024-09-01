@@ -25,13 +25,12 @@ header {
         &__selected-sake {
             &__menu-title {
                 display: block;
-                @include text(clamp(1.25rem, 0.523rem + 3.64vw, 2rem), 100%, 0, 600, $font-garamond, $color-white);
+                @include text(clamp(1.25rem, 0.523rem + 3.64, 2rem), 100%, 0, 600, $font-garamond, $color-white);
                 text-decoration: none;
-                transition: opacity .3s;
+                transition: opacity 0.3s;
 
                 &:hover {
-                    opacity: .6;
-
+                    opacity: 0.6;
                 }
             }
         }
@@ -43,11 +42,10 @@ header {
             }
 
             &__list__item {
-                transition: opacity .3s;
+                transition: opacity 0.3s;
 
                 &:hover {
-                    opacity: .6;
-
+                    opacity: 0.6;
                 }
             }
         }
@@ -106,7 +104,6 @@ header {
         img {
             width: 50%;
         }
-
     }
 }
 
@@ -118,11 +115,9 @@ header {
     img {
         width: 50%;
     }
-
 }
 
 @include mq(w-768) {
-
     header {
         padding: 60px 0;
 
@@ -138,7 +133,6 @@ header {
                 margin-top: 24px;
 
                 &__list {
-
                     &__item {
                         width: 45%;
                         @include text(18px, 120%, 0, 400, $font-poppins, $color-white);
@@ -151,7 +145,6 @@ header {
             }
 
             &__selected-sake {
-
                 &__list {
                     width: 100%;
 
@@ -176,7 +169,5 @@ header {
         img {
             width: 25%;
         }
-
     }
-
 }

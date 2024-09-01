@@ -1,4 +1,5 @@
 .firstview {
+    background-color: #ffdd75;
     &__inner {
         @include display-flex(row, flex-end, center);
 
@@ -8,7 +9,7 @@
             place-items: center;
 
             img {
-                margin-top: 120px;
+                margin-top: 76px;
                 width: 80%;
             }
         }
