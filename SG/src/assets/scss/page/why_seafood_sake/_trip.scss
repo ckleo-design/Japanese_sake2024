@@ -1,0 +1,46 @@
+.page__why-sake {
+    .why-sake__trip {
+        padding-top: 100px;
+        padding-bottom: 100px;
+        background-color: #efe6d4;
+        &__title {
+            margin-bottom: 30px;
+            @include text(36px, 100%, 0, 500, $font-garamond, #333);
+            text-align: center;
+        }
+        &__intro {
+            width: 70%;
+            margin: 20px auto 0;
+            @include text(18px, 150%, 0, 500, $font-poppins, $color-black);
+            text-align: center;
+        }
+        &__inner {
+            @include display-1280;
+            margin-top: 60px;
+            @include display-flex(row, space-between, stretch);
+            flex-wrap: wrap;
+            row-gap: 60px;
+            &__block {
+                width: 32%;
+                iframe {
+                    width: 100%;
+                    height: auto;
+                    aspect-ratio: 16/9;
+                }
+                &__title {
+                    margin-top: 12px;
+                    @include text(18px, 150%, 0, 500, $font-poppins, $color-black);
+                    &::after {
+                        content: '';
+                        background-image: url('../images/open_new_window_icon.png');
+                        background-size: contain;
+                        display: inline-block;
+                        margin-left: 6px;
+                        width: 15px;
+                        height: 14px;
+                    }
+                }
+            }
+        }
+    }
+}

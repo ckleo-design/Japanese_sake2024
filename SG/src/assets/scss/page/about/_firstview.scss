@@ -1,5 +1,6 @@
 .firstview {
-    background-color: #ffdd75;
+    background: url('../images/firstview-bg.png') 50% 0 no-repeat;
+    background-size: cover;
     &__inner {
         @include display-flex(row, flex-end, center);
 

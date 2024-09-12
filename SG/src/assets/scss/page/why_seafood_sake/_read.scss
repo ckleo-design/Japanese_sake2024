@@ -1,5 +1,4 @@
-.page__selected-sake {
-
+.page__why-sake {
     .selected-sake__read {
         @include display-1280;
         padding-top: 100px;
@@ -32,7 +31,6 @@
                     span {
                         display: block;
                         @include text(18px, 130%, 0, 400, $font-poppins, #333);
-
                     }
                 }
 
@@ -50,7 +48,6 @@
 
 @include mq(w-768) {
     .page__selected-sake {
-
         .selected-sake__read {
             @include display-100sp;
             padding-top: 80px;
@@ -76,5 +73,4 @@
             }
         }
     }
-
 }

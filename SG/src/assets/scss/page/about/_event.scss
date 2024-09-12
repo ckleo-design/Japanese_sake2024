@@ -52,7 +52,7 @@
             p {
                 background-color: $color-black;
                 padding: 28px 0 30px;
-                @include text(clamp(1.75rem, 1.821rem + -0.36, 1.5rem), 100%, 0, 600, $font-garamond, $color-white);
+                @include text(clamp(1.75rem, 1.821rem + -0.36, 1.5rem), 100%, 0, 600, $font-garamond, $color-yellow);
                 text-align: center;
             }
         }

@@ -1,0 +1,112 @@
+.page__why-sake {
+    .selected-sake__differences {
+        &__first {
+            padding-top: 100px;
+            padding-bottom: 100px;
+            &__inner {
+                @include display-1280;
+                &__title {
+                    margin-bottom: 30px;
+                    @include text(36px, 100%, 0, 500, $font-garamond, #333);
+                    text-align: center;
+                }
+                &__detail {
+                    width: 70%;
+                    margin: 20px auto 0;
+                    @include text(18px, 150%, 0, 500, $font-poppins, $color-black);
+                    text-align: center;
+                }
+                &__block {
+                    margin-top: 60px;
+                    @include display-flex(row, space-between, flex-start);
+                    &__img {
+                        width: 48%;
+                    }
+                    &__table {
+                        width: 48%;
+                        tr {
+                            th {
+                                background-color: $color-black;
+                                padding: 12px 0;
+                                @include text(18px, 100%, 0, 500, $font-poppins, $color-white);
+                                text-align: center;
+                            }
+                            td {
+                                border: 1px solid #b3b3b3;
+                                padding: 12px 6px;
+                                &:not(:nth-child(1)) {
+                                    text-align: center;
+                                }
+                            }
+                            &:nth-child(5),
+                            &:nth-child(6) {
+                                background-color: #e7eff5;
+                                td {
+                                    font-weight: bold;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &__second {
+            padding-top: 100px;
+            padding-bottom: 100px;
+            background-color: #efe6d4;
+            &__inner {
+                @include display-1280;
+
+                &__title {
+                    margin-bottom: 30px;
+                    @include text(36px, 100%, 0, 500, $font-garamond, #333);
+                    text-align: center;
+                }
+                &__detail {
+                    margin: 20px auto 0;
+                    @include text(18px, 150%, 0, 500, $font-poppins, $color-black);
+                    text-align: center;
+                }
+                &__img {
+                    width: 90%;
+                    margin: 60px auto 0;
+                }
+            }
+        }
+        &__third {
+            @include display-1280;
+            padding-top: 100px;
+            padding-bottom: 100px;
+
+            &__title {
+                margin-bottom: 30px;
+                @include text(36px, 100%, 0, 500, $font-garamond, #333);
+                text-align: center;
+            }
+            &__detail {
+                margin: 20px auto 0;
+                @include text(18px, 150%, 0, 500, $font-poppins, $color-black);
+                text-align: center;
+            }
+            &__img {
+                @include display-flex(row, center, stretch);
+                column-gap: 2%;
+                width: 100%;
+                margin: 60px auto 0;
+                img {
+                    width: 30%;
+                }
+            }
+        }
+    }
+}
+
+@include mq(w-768) {
+    .page__selected-sake {
+        .selected-sake__boom {
+            @include display-100sp;
+            padding-top: 60px;
+            padding-bottom: 30px;
+        }
+    }
+}

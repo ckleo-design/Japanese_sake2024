@@ -1,8 +1,9 @@
 .page__why-sake {
+    .bg-yellow {
+        background-color: $color-yellow;
+    }
     .why-sake__detail {
         background-color: $color-light-brown;
-
-
 
         &__block {
             padding-top: 60px;
@@ -14,6 +15,9 @@
                 .why-sake__detail__block__image {
                     order: 1;
                 }
+            }
+            &:nth-child(3n) {
+                background-color: $color-yellow;
             }
 
             &__inner {
@@ -44,11 +48,8 @@
 @include mq(w-768) {
     .page__why-sake {
         .why-sake__detail {
-
             &__block {
-
                 &:nth-child(2n) {
-
                     .why-sake__detail__block__image {
                         order: 0;
                     }
@@ -68,11 +69,10 @@
                     width: 100%;
 
                     &__title {
-                        line-height: 120%
+                        line-height: 120%;
                     }
                 }
             }
         }
     }
-
 }
