@@ -1,0 +1,34 @@
+.page__why-sake {
+    .selected-sake__boom {
+        padding-top: 100px;
+        padding-bottom: 100px;
+        background-color: $color-yellow;
+        &__inner {
+            @include display-1280;
+            &__title {
+                margin-bottom: 30px;
+                @include text(36px, 100%, 0, 500, $font-garamond, #333);
+                text-align: center;
+            }
+            &__detail {
+                margin-top: 20px;
+                @include text(18px, 150%, 0, 500, $font-poppins, $color-black);
+                text-align: center;
+            }
+            &__graphic {
+                @include display-1280;
+                margin-top: 100px;
+            }
+        }
+    }
+}
+
+@include mq(w-768) {
+    .page__selected-sake {
+        .selected-sake__boom {
+            @include display-100sp;
+            padding-top: 60px;
+            padding-bottom: 30px;
+        }
+    }
+}

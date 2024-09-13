@@ -1,164 +1,73 @@
 <!DOCTYPE html>
 <html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SEAFOOD LOVES SAKE | JFOODO</title>
+        <meta name="description" content="Seafood loves sake! For 2 months only, an exclusive marriage between seafood and sake will happen at highly acclaimed restaurants in Singapore! Do not miss out on this opportunity." />
+        <meta name="keywords" content="SEAFOOD, SAKE, sake, Japanese sake, Singapore" />
+        <link rel="icon" href="../assets/images/favicon.png" />
+        <link rel="stylesheet" href="assets/css/reset.css" />
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+        <meta property="og:title" content="SEAFOOD LOVES SAKE | JFOODO" />
+        <meta property="og:type" content="website" />
+        <meta property="og:description" content="Seafood loves sake! For 2 months only, an exclusive marriage between seafood and sake will happen at highly acclaimed restaurants in Singapore! Do not miss out on this opportunity." />
+        <meta property="og:url" content="" />
+        <meta property="og:site_name" content="SEAFOOD LOVES SAKE" />
+        <meta property="og:image" content="../assets/images/jfoodo_ogp.png" />
+        <link rel="stylesheet" href="../assets/css/style.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+        <!-- HTML パーツ挿入js -->
+        <script src="../assets/js/include.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SEAFOOD LOVES SAKE | JFOODO</title>
-    <meta name="description" content="Seafood loves sake! For 2 months only, an exclusive marriage between seafood and sake will happen at highly acclaimed restaurants in Singapore! Do not miss out on this opportunity.">
-    <meta name="keywords" content="SEAFOOD, SAKE, sake, Japanese sake, Singapore">
-    <link rel="icon" href="../assets/images/favicon.png">
-    <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-    <meta property="og:title" content="SEAFOOD LOVES SAKE | JFOODO">
-    <meta property="og:type" content="website">
-    <meta property="og:description" content="Seafood loves sake! For 2 months only, an exclusive marriage between seafood and sake will happen at highly acclaimed restaurants in Singapore! Do not miss out on this opportunity.">
-    <meta property="og:url" content="">
-    <meta property="og:site_name" content="SEAFOOD LOVES SAKE">
-    <meta property="og:image" content="../assets/images/jfoodo_ogp.png">
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-    <!-- HTML パーツ挿入js -->
-    <script src="../assets/js/include.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
-</head>
+    <body class="page__selected-sake">
+        <div id="header-include-page"></div>
+        <div id="menu-open-btn" onclick="openMenu()"><img src="../assets/images/menu-open-btn.png" alt="" /></div>
+        <section class="firstview">
+            <div class="firstview__inner">
+                <h2 class="firstview__inner__title">
+                    Selected Sakes<br /><span>A selection of premium sake has been carefully chosen<br class="d-pc" />from multiple suppliers to complement the pairing menus. <br class="d-pc" />Discover the fascinating stories behind each sake <br class="d-pc" />as you enjoy them with sumptuous seafood dishes. </span>
+                </h2>
 
-<body class="page__selected-sake">
-    <div id="header-include-page"></div>
-    <div id="menu-open-btn" onclick="openMenu()"><img src="../assets/images/menu-open-btn.png" alt=""></div>
-    <section class="firstview">
-        <div class="firstview__inner">
-            <h2 class="firstview__inner__title"> Selected Sakes<br><span>A selection of premium sake has been carefully chosen<br class="d-pc">from multiple suppliers to complement the pairing menus.
-                    <br class="d-pc">Discover the fascinating stories behind each sake
-                    <br class="d-pc">as you enjoy them with sumptuous seafood dishes. </span></h2>
-            </h2>
-            <div class="firstview__inner__image">
-                <img src="../assets/images/page/selected-sake/firstview-image-selected-sake.png" alt="">
-            </div>
-        </div>
-    </section>
-    <main>
-        <div class="selected-sake__intro">
-            <h2 class="selected-sake__intro__title">Types of Sake</h2>
-            <p class="selected-sake__intro__intro">Sake generally comes in four types, the fragrant and slightly citrusy "aromatic" type known as Kunshu; Soushu, the "smooth and refreshing" type; Junshu, the "rich" type full of strong umami and lastly, Jukushu, the "rich and complex" type characterised by a dry nutty fragrance. Naturally sparkling varieties have also emerged recently to growing popularity. Please refer to the chart below for more information.
-            </p>
-        </div>
-        <div class="selected-sake__graphic" id="types">
-            <img class="selected-sake__graphic__content" src="../assets/images/page/selected-sake/selected-sake-graphic.png" alt="">
-        </div>
-        <div id="sakelist"></div>
-        <div class="selected-sake__list">
-            <div class="selected-sake__list__inner" id="sakeListInsert"></div>
-        </div>
-        <div class="selected-sake__grades" id="grades">
-            <h2 class="selected-sake__grades__title">Grades of Sake</h2>
-            <table class="selected-sake__grades__table">
-                <thead>
-                    <tr>
-                        <th>Rice Milling Percentage</th>
-                        <th>Alcohol-Added Style<span>(Rice, Water, Yeast, Koji/Distilled Alcohol)</span></th>
-                        <th>Pure Rice Style<span>(Rice, Water, Yeast, Koji)</span></th>
-                    </tr>
-                </thead>
-                <tr>
-                    <td>50% or Less Remaining</td>
-                    <td>Daiginjo</td>
-                    <td>Junmai Daiginjo</td>
-                </tr>
-                <tr>
-                    <td>60% or Less Remaining</td>
-                    <td>Ginjo</td>
-                    <td>Junmai Ginjo</td>
-                </tr>
-                <tr>
-                    <td>70% or Less Remaining</td>
-                    <td>Honjozo</td>
-                    <td rowspan="2">Junmai</td>
-                </tr>
-                <tr>
-                    <td>No Minimum Milling Requirement</td>
-                    <td>Futsu-shu</td>
-                </tr>
-            </table>
-        </div>
-        <div class="selected-sake__taste" id="taste">
-            <h2 class="selected-sake__taste__title">How to Taste Sake</h2>
-            <div class="selected-sake__taste__steps">
-                <div class="selected-sake__taste__steps__item">
-                    <h3 class="selected-sake__taste__steps__item__title">STEP 1<br>Visual</h3>
-                    <p class="selected-sake__taste__steps__item__detail">Observe the colour and clarity to set the stage for your tasting journey</p>
-                </div>
-                <div class="selected-sake__taste__steps__item">
-                    <h3 class="selected-sake__taste__steps__item__title">STEP 2<br>Smell</h3>
-                    <p class="selected-sake__taste__steps__item__detail">Swirl the sake gently and Inhale deeply to identify the diverse scents</p>
-                </div>
-                <div class="selected-sake__taste__steps__item">
-                    <h3 class="selected-sake__taste__steps__item__title">STEP 3<br>Taste</h3>
-                    <p class="selected-sake__taste__steps__item__detail">Savour the nuanced flavours, experience the intensity, explore the texture, relish the umami, and appreciate the lingering finish</p>
-                </div>
-                <div class="selected-sake__taste__steps__item">
-                    <h3 class="selected-sake__taste__steps__item__title">STEP 4<br>Think</h3>
-                    <p class="selected-sake__taste__steps__item__detail">Consider the balance of flavours and how they harmonise on your palate. Does this exemplify the desired standard?</p>
+                <div class="firstview__inner__image">
+                    <img src="../assets/images/page/selected-sake/firstview-image-selected-sake.png" alt="" />
                 </div>
             </div>
-        </div>
-        <div class="selected-sake__read" id="read">
-            <h2 class="selected-sake__read__title">How to Read Sake Labels</h2>
-            <div class="selected-sake__read__group">
-                <div class="selected-sake__read__group__block d-sp">
-                    <img src="../assets/images/page/selected-sake/sake-label-1.png" alt="">
-                </div>
-                <div class="selected-sake__read__group__block">
-                    <p class="selected-sake__read__group__block__title">A: Legally Required Information<br>on Sake Bottle Labels in Japan</p>
-                    <p class="selected-sake__read__group__block__list">1 : Product Name<span>Sake is referred to as both 清酒 (seishu) and 日本酒 (nihonshu)</span></p>
-                    <p class="selected-sake__read__group__block__list">2 : Producer’s Name</p>
-                    <p class="selected-sake__read__group__block__list">3 : Producer’s Address</p>
-                    <p class="selected-sake__read__group__block__list">4 : Net Content</p>
-                    <p class="selected-sake__read__group__block__list">5 : Alcohol Content<span>Typically ranging between 15-16%, with Genshu varieties around 20%</span></p>
-                    <p class="selected-sake__read__group__block__list">6 : Ingredients<span>Ingredients include rice and rice koji. Distilled alcohol is added to non-Junmai types</span></p>
-                    <p class="selected-sake__read__group__block__list">7 : Date of Production<span>Indicates when the sake was bottled and dispatched from the brewery</span></p>
-                    <p class="selected-sake__read__group__block__list">8 : Legal Statement on Drinking</p>
-                    <p class="selected-sake__read__group__block__title">B: Specially Designated Sake</p>
-                    <p class="selected-sake__read__group__block__list"><span>Stated if the Sake falls into Premium Sake Classification.<br>e.g. Daiginjo, Ginjo and Junmai.</span></p>
-                </div>
-                <div class="selected-sake__read__group__block d-pc">
-                    <img src="../assets/images/page/selected-sake/sake-label-1.png" alt="">
-                </div>
-                <div class="selected-sake__read__group__block small">
-                    <img src="../assets/images/page/selected-sake/sake-label-2.png" alt="">
-                </div>
-                <div class="selected-sake__read__group__block">
-                    <p class="selected-sake__read__group__block__title">C: Optional Information (Back Label)</p>
-                    <p class="selected-sake__read__group__block__list">9: Rice Milling Rate<span>The percentage of the rice grain that remains after polishing</span></p>
-                    <p class="selected-sake__read__group__block__list">10: Sake Meter Value (SMV)<span>Generally, a higher value indicates a drier sake, while a lower value suggests a sweeter sake</span></p>
-                    <p class="selected-sake__read__group__block__list">11: Acidity<span>The higher the acidity, the drier the sake becomes</span></p>
-                    <p class="selected-sake__read__group__block__list">12: Amino Acids Content</p>
-                    <br><br><br>
-                    <img src="../assets/images/page/selected-sake/sake-label-3.png" alt="">
-                </div>
+        </section>
+        <main>
+            <div class="selected-sake__intro">
+                <h2 class="selected-sake__intro__title">Types of Sake</h2>
+                <p class="selected-sake__intro__intro">Sake generally comes in four types, the fragrant and slightly citrusy "aromatic" type known as Kunshu; Soushu, the "smooth and refreshing" type; Junshu, the "rich" type full of strong umami and lastly, Jukushu, the "rich and complex" type characterised by a dry nutty fragrance. Naturally sparkling varieties have also emerged recently to growing popularity. Please refer to the chart below for more information.</p>
             </div>
+            <div class="selected-sake__graphic" id="types">
+                <img class="selected-sake__graphic__content" src="../assets/images/page/selected-sake/selected-sake-graphic.png" alt="" />
+            </div>
+            <div class="selected-sake__list">
+                <div class="selected-sake__list__inner" id="sake_list"></div>
+            </div>
+        </main>
+        <div id="footer-include-page-selected-sake"></div>
+        <div id="page-top">
+            <img src="../assets/images/to-top-btn.png" alt="" />
         </div>
-    </main>
-    <div id="footer-include-page-selected-sake"></div>
-    <div id="page-top">
-        <img src="../assets/images/to-top-btn.png" alt="">
-    </div>
-    <script id="sakeList" type="text/x-handlebars-template">
-        {{#each sakeList}}
-        <div class="selected-sake__list__inner__item">
-            <img class="selected-sake__list__inner__item__image" src="../assets/images/page/selected-sake/{{image}}" alt="">
-            <p class="selected-sake__list__inner__item__maker">{{maker}}</p>
-            <p class="selected-sake__list__inner__item__name">{{name}}</p>
-            <a class="selected-sake__list__inner__item__alink" href="{{alink}}">View Details</a>
-        </div>
-        {{/each}}
-    </script>
-    <!-- age js -->
-    <script src="../assets/js/cmn.js"></script>
-    <!-- age js end -->
-    <script src="../assets/js/content.js"></script>
-    <script src="../assets/js/sakeList.js" type="text/javascript"></script>
-</body>
 
+        <!-- age js -->
+        <script src="../assets/js/cmn.js"></script>
+        <!-- age js end -->
+        <script src="../assets/js/content.js"></script>
+        <script src="../assets/js/sakeList.js" type="text/javascript"></script>
+        <script id="sakeList" type="text/x-handlebars-template">
+            {{#each sakeList}}
+                <div class='selected-sake__list__inner__item'>
+                    <img class='selected-sake__list__inner__item__image' src='../assets/images/page/selected-sake/{{image}}.png' alt='' />
+                    <p class='selected-sake__list__inner__item__maker'>{{maker}}</p>
+                    <p class='selected-sake__list__inner__item__name'>{{name}}</p>
+                    <a class='selected-sake__list__inner__item__alink' href='{{alink}}.html'>View Details</a>
+                </div>
+            {{/each}}
+        </script>
+    </body>
 </html>

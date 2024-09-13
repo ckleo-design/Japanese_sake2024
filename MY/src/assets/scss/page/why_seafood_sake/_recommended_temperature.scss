@@ -1,0 +1,20 @@
+.page__why-sake {
+    .why-sake__recommended_temperature {
+        background-color: #efe6d4;
+        padding-top: 100px;
+        padding-bottom: 100px;
+        &__title {
+            margin-bottom: 30px;
+            @include text(36px, 100%, 0, 500, $font-garamond, #333);
+            text-align: center;
+        }
+        &__inner {
+            @include display-1280;
+            margin-top: 60px;
+            @include display-flex(row, space-between, stretch);
+            &__block {
+                width: 48%;
+            }
+        }
+    }
+}

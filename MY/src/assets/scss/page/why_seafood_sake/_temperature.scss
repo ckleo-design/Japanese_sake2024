@@ -1,0 +1,38 @@
+.page__why-sake {
+    .why-sake__temperature {
+        padding-top: 100px;
+        padding-bottom: 100px;
+        &__title {
+            margin-bottom: 30px;
+            @include text(36px, 100%, 0, 500, $font-garamond, #333);
+            text-align: center;
+        }
+        &__inner {
+            @include display-1280;
+            margin-top: 60px;
+            @include display-flex(row, space-between, stretch);
+            &__block {
+                width: 48%;
+                border: 1px solid #b3b3b3;
+                @include display-flex(column, space-between, normal);
+
+                &__title {
+                    background-color: $color-black;
+                    padding: 12px 0;
+                    @include text(18px, 100%, 0, 500, $font-poppins, $color-white);
+                    text-align: center;
+                }
+                &__list {
+                    padding: 0 24px;
+                    margin: 20px 0;
+                    li {
+                        @include text(18px, 150%, 0, 500, $font-poppins, $color-black);
+                    }
+                }
+                &__img {
+                    padding: 0 18px 14px 18px;
+                }
+            }
+        }
+    }
+}

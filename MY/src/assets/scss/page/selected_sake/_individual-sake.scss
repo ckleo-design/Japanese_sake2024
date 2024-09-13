@@ -1,4 +1,10 @@
 .individual-sake {
+    .page__logo {
+        display: block;
+        width: 234px;
+        height: auto;
+        margin: 80px auto;
+    }
     .individual-sake__inner {
         @include display-1280;
         margin-top: 50px;
@@ -33,7 +39,7 @@
                     }
 
                     &_content {
-                        @include text(16px, 100%, 0, 500, $font-poppins, #333);
+                        @include text(16px, 125%, 0, 500, $font-poppins, #333);
                     }
                 }
             }
@@ -43,11 +49,10 @@
             width: 47%;
             display: flex;
             flex-direction: column;
+            justify-content: flex-start;
             justify-content: space-between;
 
-
             &__detail {
-
                 &__name {
                     margin-bottom: 16px;
                     @include text(36px, 120%, 0, 600, $font-garamond, #333);
@@ -74,6 +79,8 @@
             &__about {
                 background-color: $color-light-brown;
                 padding: 26px;
+                align-self: flex-start;
+                height: 54%;
 
                 &__title {
                     margin-bottom: 10px;
@@ -86,7 +93,6 @@
             }
         }
     }
-
 
     &__buy {
         background-color: #333333;
@@ -101,7 +107,7 @@
         text-decoration: none;
 
         &:after {
-            content: "";
+            content: '';
             display: inline-block;
             width: 30px;
             height: 30px;
@@ -138,7 +144,6 @@
     }
 }
 
-
 @include mq(w-768) {
     .individual-sake {
         .individual-sake__inner {
@@ -149,12 +154,9 @@
                 width: 100%;
                 margin-bottom: 40px;
 
-
                 &__label {
-
                     &_row {
                         @include display-flex(column, flex-start, center);
-
 
                         &_title {
                             width: 100%;
@@ -172,7 +174,6 @@
 
             &__right {
                 width: 100%;
-
 
                 &__detail {
                     margin-bottom: 30px;
@@ -197,8 +198,6 @@
                 height: 15px;
                 transform: translate(10px, 0px);
             }
-
         }
     }
-
 }

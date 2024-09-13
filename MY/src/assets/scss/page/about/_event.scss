@@ -39,11 +39,10 @@
         &__block {
             width: 31.2%;
             text-decoration: none;
-            transition: opacity .3s;
+            transition: opacity 0.3s;
 
             &:hover {
-                opacity: .6;
-
+                opacity: 0.6;
             }
 
             img {
@@ -53,17 +52,15 @@
             p {
                 background-color: $color-black;
                 padding: 28px 0 30px;
-                @include text(clamp(1.75rem, 1.821rem + -0.36vw, 1.5rem), 100%, 0, 600, $font-garamond, $color-white);
+                @include text(clamp(1.75rem, 1.821rem + -0.36, 1.5rem), 100%, 0, 600, $font-garamond, $color-yellow);
                 text-align: center;
             }
         }
     }
-
 }
 
 @include mq(w-768) {
     .event {
-
         padding-top: 80px;
         padding-bottom: 80px;
 
@@ -97,14 +94,11 @@
             &__block {
                 width: 100%;
 
-
                 img {
                     aspect-ratio: 5/3;
                     object-fit: cover;
                 }
             }
         }
-
     }
-
 }

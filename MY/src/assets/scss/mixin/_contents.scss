@@ -3,43 +3,36 @@
         margin: 60px auto;
         width: 100%;
         height: 345px;
-        background: url("../images/spacing-img#{$i}.jpg")50% 50% no-repeat;
+        background: url('../images/spacing-img#{$i}.jpg') 50% 50% no-repeat;
         background-size: cover;
     }
-
 }
 
 .section--title {
     display: inline-block;
     padding: 6px 30px;
     background-color: $color-white;
-    @include text(clamp(1.125rem, 1.054rem + 0.36vw, 1.375rem),
-        100%,
-        0,
-        900,
-        inherit,
-        $color-black);
+    @include text(clamp(1.125rem, 1.054rem + 0.36, 1.375rem), 100%, 0, 900, inherit, $color-black);
+    font-size: 1.125rem;
 }
 
 .alink {
-    @include text(clamp(1.125rem, 1.054rem + 0.36vw, 1.375rem), 100%, 0, 500, inherit, $color-black);
+    @include text(clamp(1.125rem, 1.054rem + 0.36, 1.375rem), 100%, 0, 500, inherit, $color-black);
     padding: 12px 30px;
     border: 1px solid $color-black;
     border-radius: 50px;
 
     &::after {
-        content: "";
+        content: '';
         display: inline-block;
         width: 20px;
         height: 5px;
         margin-left: 10px;
         margin-bottom: 2px;
     }
-
 }
 
 @include mq(w-768) {
-
     @for $i from 1 through 2 {
         .spacing-img#{$i} {
             margin: 30px auto;
@@ -54,6 +47,4 @@
         padding: 6px 30px;
         background-color: $color-white;
     }
-
-
 }

@@ -1,6 +1,6 @@
 footer {
     .footer__link {
-        background-color: $color-red;
+        background-color: #e6b930;
         padding: 92px 0;
 
         &__inner {
@@ -23,19 +23,16 @@ footer {
                 &.footer__restaurants {
                     background: url(../../assets/images/footer-restaurants-bg.png) 50% 50% no-repeat;
                     background-size: cover;
-
                 }
 
                 &.footer__selected {
                     background: url(../../assets/images/footer-selected-bg.png) 50% 50% no-repeat;
                     background-size: cover;
-
                 }
 
                 &.footer__about {
                     background: url(../../assets/images/footer-about-bg.png) 50% 50% no-repeat;
                     background-size: cover;
-
                 }
 
                 a {
@@ -60,7 +57,7 @@ footer {
         padding-top: 64px;
         padding-bottom: 30px;
         padding-right: 30px;
-        background: url(../images/footer-border.png)20px 0 repeat-x;
+        background: url(../images/footer-border.png) 20px 0 repeat-x;
         background-size: auto 180px;
         @include display-flex(column, center, flex-end);
 
@@ -79,11 +76,10 @@ footer {
     }
 }
 
-
 @include mq(w-768) {
     footer {
         .footer__link {
-            background-color: $color-red;
+            background-color: #e6b930;
             padding: 92px 0;
 
             &__inner {
@@ -96,9 +92,7 @@ footer {
                     display: grid;
                     place-items: center;
 
-
                     a {
-
                         p {
                             @include text(36px, 100%, 0, 500, $font-garamond, $color-white);
                             text-align: center;
@@ -106,7 +100,6 @@ footer {
 
                         img {
                             margin: 12px auto 0;
-
                         }
                     }
                 }
@@ -114,13 +107,10 @@ footer {
         }
 
         .footer__inner {
-
-
             &__content {
                 padding-left: 10px;
                 text-align: right;
             }
         }
     }
-
 }

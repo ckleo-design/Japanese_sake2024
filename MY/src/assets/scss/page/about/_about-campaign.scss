@@ -1,5 +1,5 @@
 .about-campaign {
-    background-color: $color-red;
+    background-color: $color-yellow;
     padding-top: 180px;
     padding-bottom: 174px;
 
@@ -9,19 +9,18 @@
 
         &__title {
             width: 47%;
-            @include text(50px, 100%, 0, 600, $font-garamond, $color-white);
+            @include text(50px, 100%, 0, 600, $font-garamond, $color-black);
             text-align: center;
 
             span {
                 margin-top: 30px;
-                @include text(24px, 100%, 0, 400, $font-garamond, $color-white);
+                @include text(24px, 100%, 0, 400, $font-garamond, $color-black);
             }
-
         }
 
         &__detail {
             width: 52%;
-            @include text(18px, 150%, 0, 500, $font-poppins, $color-white);
+            @include text(18px, 150%, 0, 500, $font-poppins, $color-black);
         }
     }
 }
@@ -42,7 +41,6 @@
                 span {
                     @include text(18px, 100%, 0, 400, $font-garamond, $color-white);
                 }
-
             }
 
             &__detail {
@@ -50,5 +48,4 @@
             }
         }
     }
-
 }

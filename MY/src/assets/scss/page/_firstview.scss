@@ -16,7 +16,6 @@
                     margin-top: 30px;
                     @include text(24px, 133%, 0, 400, $font-garamond, $color-black);
                 }
-
             }
 
             &__image {
@@ -27,7 +26,6 @@
 }
 
 @include mq(w-768) {
-
     .page__why-sake,
     .page__restaurants,
     .page__selected-sake {
@@ -42,7 +40,6 @@
                         width: 100%;
                         font-size: 20px;
                     }
-
                 }
 
                 &__image {
