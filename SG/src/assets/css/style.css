@@ -904,7 +904,7 @@ footer .footer__inner {
 
 @media screen and (max-width: 768px) {
   footer .footer__link {
-    background-color: #84232b;
+    background-color: #e6b930;
     padding: 92px 0; }
     footer .footer__link__inner {
       width: 100%;
@@ -1976,67 +1976,60 @@ footer .footer__inner {
   background-color: #efe6d4;
   padding-top: 60px;
   padding-bottom: 160px; }
-  .page__restaurants .event__restaurants__period1, .page__restaurants .event__restaurants__period2 {
-    padding: 0 80px;
-    max-width: 1440px;
-    margin: 0 auto; }
-    .page__restaurants .event__restaurants__period1__title, .page__restaurants .event__restaurants__period2__title {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      position: relative; }
-      .page__restaurants .event__restaurants__period1__title h2, .page__restaurants .event__restaurants__period2__title h2 {
-        padding: 12px 30px;
-        font-size: 30px;
-        line-height: 100%;
-        letter-spacing: 0;
-        font-weight: 600;
-        font-family: "EB Garamond", serif;
-        color: #ffffff;
-        text-align: center;
-        width: fit-content;
-        background-color: #333333;
-        position: relative;
-        z-index: 10; }
-        .page__restaurants .event__restaurants__period1__title h2::after, .page__restaurants .event__restaurants__period1__title h2::before, .page__restaurants .event__restaurants__period2__title h2::after, .page__restaurants .event__restaurants__period2__title h2::before {
-          content: "";
-          width: 30px;
-          height: 30px;
-          border-radius: 50%;
-          background-color: #333;
-          position: absolute;
-          top: 50%;
-          transform: translateY(-15px); }
-        .page__restaurants .event__restaurants__period1__title h2::before, .page__restaurants .event__restaurants__period2__title h2::before {
-          left: -15px; }
-        .page__restaurants .event__restaurants__period1__title h2::after, .page__restaurants .event__restaurants__period2__title h2::after {
-          right: -15px; }
-      .page__restaurants .event__restaurants__period1__title__line, .page__restaurants .event__restaurants__period2__title__line {
-        width: 1280px;
-        height: 1px;
-        background-color: #333;
-        position: absolute;
-        top: 50%;
-        z-index: 0; }
-    .page__restaurants .event__restaurants__period1__date, .page__restaurants .event__restaurants__period2__date {
-      margin: 24px auto 20px;
-      font-size: 36px;
+  .page__restaurants .event__restaurants__title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 40px; }
+    .page__restaurants .event__restaurants__title h2 {
+      padding: 12px 30px;
+      font-size: 30px;
       line-height: 100%;
       letter-spacing: 0;
       font-weight: 600;
       font-family: "EB Garamond", serif;
-      color: #333;
-      text-align: center; }
-    .page__restaurants .event__restaurants__period1__intro, .page__restaurants .event__restaurants__period2__intro {
-      font-size: 18px;
-      line-height: 100%;
-      letter-spacing: 0;
-      font-weight: 500;
-      font-family: "EB Garamond", serif;
-      color: #333;
-      text-align: center; }
-    .page__restaurants .event__restaurants__period1__list, .page__restaurants .event__restaurants__period2__list {
+      color: #ffffff;
+      text-align: center;
+      width: fit-content;
+      background-color: #333333;
+      position: relative;
+      z-index: 10; }
+      .page__restaurants .event__restaurants__title h2::after, .page__restaurants .event__restaurants__title h2::before {
+        content: '';
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: #333;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-15px); }
+      .page__restaurants .event__restaurants__title h2::before {
+        left: -15px; }
+      .page__restaurants .event__restaurants__title h2::after {
+        right: -15px; }
+    .page__restaurants .event__restaurants__title__line {
+      width: 1280px;
+      height: 1px;
+      background-color: #333;
+      position: absolute;
+      top: 50%;
+      z-index: 0; }
+  .page__restaurants .event__restaurants__intro {
+    font-size: 33px;
+    line-height: 100%;
+    letter-spacing: 0;
+    font-weight: 500;
+    font-family: "EB Garamond", serif;
+    color: #333;
+    text-align: center; }
+  .page__restaurants .event__restaurants__inner {
+    padding: 0 80px;
+    max-width: 1440px;
+    margin: 0 auto;
+    margin-top: 60px; }
+    .page__restaurants .event__restaurants__inner__list {
       padding: 0 150px;
       margin-top: 44px;
       display: flex;
@@ -2045,19 +2038,25 @@ footer .footer__inner {
       align-items: flex-start;
       flex-wrap: wrap;
       row-gap: 30px; }
-      .page__restaurants .event__restaurants__period1__list__item, .page__restaurants .event__restaurants__period2__list__item {
-        width: 30.4%; }
-        .page__restaurants .event__restaurants__period1__list__item:last-child, .page__restaurants .event__restaurants__period2__list__item:last-child {
-          margin-right: auto; }
-  .page__restaurants .event__restaurants .event__restaurants__period2 {
-    margin-top: 100px; }
-    .page__restaurants .event__restaurants .event__restaurants__period2__list__item {
-      margin-right: auto; }
+      .page__restaurants .event__restaurants__inner__list::after {
+        content: '';
+        box-sizing: border-box;
+        width: 30.4%;
+        max-width: 400px; }
+      .page__restaurants .event__restaurants__inner__list__item {
+        display: block;
+        width: 30.4%;
+        transition: opacity 0.3s; }
+        .page__restaurants .event__restaurants__inner__list__item:hover {
+          opacity: 0.75; }
+        .page__restaurants .event__restaurants__inner__list__item img {
+          width: 100%;
+          height: auto; }
 
-.page__restaurants .restaurants__map {
+.restaurants__map {
   width: 80%;
   margin: 20px auto; }
-  .page__restaurants .restaurants__map iframe {
+  .restaurants__map iframe {
     width: 100%;
     height: auto;
     aspect-ratio: 16/9; }
@@ -2156,7 +2155,7 @@ footer .footer__inner {
         position: relative;
         z-index: 10; }
         .individual-restaurant__pairing__block__label__detail::after, .individual-restaurant__pairing__block__label__detail::before {
-          content: "";
+          content: '';
           width: 30px;
           height: 30px;
           border-radius: 50%;
@@ -2322,9 +2321,12 @@ footer .footer__inner {
   display: block;
   margin: 60px auto 90px;
   border-radius: 34px;
-  text-decoration: none; }
+  text-decoration: none;
+  transition: background-color 0.3s; }
+  .individual-restaurant__reservation:hover {
+    background-color: #1c1c1c; }
   .individual-restaurant__reservation:after {
-    content: "";
+    content: '';
     display: inline-block;
     width: 30px;
     height: 30px;
@@ -2474,14 +2476,17 @@ footer .footer__inner {
     flex-wrap: wrap;
     row-gap: 86px;
     column-gap: 2.4%; }
+    .page__selected-sake .selected-sake__list__inner::after {
+      content: '';
+      box-sizing: border-box;
+      width: 23%;
+      max-width: 400px; }
     .page__selected-sake .selected-sake__list__inner__item {
       width: 23%;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
       align-items: flex-start; }
-      .page__selected-sake .selected-sake__list__inner__item:last-child {
-        margin-right: auto; }
       .page__selected-sake .selected-sake__list__inner__item__image {
         width: 100%; }
       .page__selected-sake .selected-sake__list__inner__item__maker {
@@ -2502,7 +2507,7 @@ footer .footer__inner {
         color: #333;
         margin-bottom: 12px; }
       .page__selected-sake .selected-sake__list__inner__item__alink {
-        background-color: #84232b;
+        background-color: #000000;
         padding: 6px 31px 8px;
         border-radius: 22px;
         text-decoration: none;
@@ -2512,7 +2517,10 @@ footer .footer__inner {
         font-weight: 400;
         font-family: "EB Garamond", serif;
         color: #ffffff;
-        margin-top: auto; }
+        margin-top: auto;
+        transition: background-color 0.3s; }
+        .page__selected-sake .selected-sake__list__inner__item__alink:hover {
+          background-color: #333; }
 
 @media screen and (max-width: 768px) {
   .page__selected-sake .selected-sake__list__inner {
@@ -2528,6 +2536,12 @@ footer .footer__inner {
       flex-direction: column;
       justify-content: flex-start;
       align-items: flex-start; } }
+
+.individual-sake .page__logo {
+  display: block;
+  width: 234px;
+  height: auto;
+  margin: 80px auto; }
 
 .individual-sake .individual-sake__inner {
   padding: 0 80px;
@@ -2567,7 +2581,7 @@ footer .footer__inner {
           color: #333; }
         .individual-sake .individual-sake__inner__left__label_row_content {
           font-size: 16px;
-          line-height: 100%;
+          line-height: 125%;
           letter-spacing: 0;
           font-weight: 500;
           font-family: "Poppins", sans-serif;
@@ -2576,6 +2590,7 @@ footer .footer__inner {
     width: 47%;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     justify-content: space-between; }
     .individual-sake .individual-sake__inner__right__detail__name {
       margin-bottom: 16px;
@@ -2608,7 +2623,9 @@ footer .footer__inner {
       color: #333; }
     .individual-sake .individual-sake__inner__right__about {
       background-color: #efe6d4;
-      padding: 26px; }
+      padding: 26px;
+      align-self: flex-start;
+      height: 54%; }
       .individual-sake .individual-sake__inner__right__about__title {
         margin-bottom: 10px;
         font-size: 16px;
@@ -2642,7 +2659,7 @@ footer .footer__inner {
   border-radius: 34px;
   text-decoration: none; }
   .individual-sake__buy:after {
-    content: "";
+    content: '';
     display: inline-block;
     width: 30px;
     height: 30px;

@@ -79,7 +79,7 @@ footer {
 @include mq(w-768) {
     footer {
         .footer__link {
-            background-color: $color-red;
+            background-color: #e6b930;
             padding: 92px 0;
 
             &__inner {
