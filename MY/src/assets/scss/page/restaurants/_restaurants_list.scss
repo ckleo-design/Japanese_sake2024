@@ -2,7 +2,7 @@
     .event__restaurants {
         background-color: $color-light-brown;
         padding-top: 60px;
-        padding-bottom: 160px;
+        padding-bottom: 30px;
 
         &__title {
             @include display-flex(column, center, center);
@@ -52,6 +52,22 @@
         &__intro {
             @include text(33px, 100%, 0, 500, $font-garamond, #333);
             text-align: center;
+        }
+        &__switch {
+            width: fit-content;
+            margin: 30px auto;
+            a {
+                text-decoration: none;
+                @include text(33px, 100%, 0, 500, $font-garamond, #1a0dab);
+                text-align: center;
+                padding: 0 10px;
+                &:first-child {
+                    border-right: 2px solid #333;
+                }
+                &.active {
+                    color: #333;
+                }
+            }
         }
         &__inner {
             @include display-1280;
