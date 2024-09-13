@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SEAFOOD LOVES SAKE | JFOODO</title>
+        <meta name="description" content="Seafood loves sake! For 2 months only, an exclusive marriage between seafood and sake will happen at highly acclaimed restaurants in Singapore! Do not miss out on this opportunity." />
+        <meta name="keywords" content="SEAFOOD, SAKE, sake, Japanese sake, Singapore" />
+        <link rel="icon" href="../assets/images/favicon.png" />
+        <link rel="stylesheet" href="assets/css/reset.css" />
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+        <meta property="og:title" content="SEAFOOD LOVES SAKE | JFOODO" />
+        <meta property="og:type" content="website" />
+        <meta property="og:description" content="Seafood loves sake! For 2 months only, an exclusive marriage between seafood and sake will happen at highly acclaimed restaurants in Singapore! Do not miss out on this opportunity." />
+        <meta property="og:url" content="" />
+        <meta property="og:site_name" content="SEAFOOD LOVES SAKE" />
+        <meta property="og:image" content="../assets/images/jfoodo_ogp.png" />
+        <link rel="stylesheet" href="../assets/css/style.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+        <!-- HTML パーツ挿入js -->
+        <script src="../assets/js/include.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
+    </head>
+
+    <body class="">
+        <div id="header-include-page"></div>
+        <div id="menu-open-btn" onclick="openMenu()"><img src="../assets/images/menu-open-btn.png" alt="" /></div>
+        <main class="individual-sake">
+            <img class="page__logo" src="../assets/images/page/selected-sake/sake_profile_logo.png" alt="" />
+            <div class="" id="sake_profile"></div>
+            <div class="individual-sake__buttonlist">
+                <a class="individual-sake__buttonlist__back" target="_self" href="./#sakelist">view sake list</a>
+                <div class="individual-sake__buttonlist__line"></div>
+                <a class="individual-sake__buttonlist__menu" target="_self" href="../restaurants/Hanabi-Robata-Izakaya.html">view paring menu</a>
+            </div>
+        </main>
+
+        <div id="footer-outer-individual-sake"></div>
+        <div id="page-top">
+            <img src="../assets/images/to-top-btn.png" alt="" />
+        </div>
+        <script src="../assets/js/content.js"></script>
+        <script src="../assets/js/sakeList.js" type="text/javascript"></script>
+        <script id="sakeList" type="text/x-handlebars-template">
+            {{#each sakeList}}
+                {{#ifCond name 'Daiginjo Ran'}}
+                    <div class='individual-sake__inner'>
+                        <div class='individual-sake__inner__left'>
+                            <div class='individual-sake__inner__left__image'>
+                                <img src='../assets/images/page/selected-sake/{{image}}.png' alt='' />
+                            </div>
+                            <div class='individual-sake__inner__left__label'>
+                                <div class='individual-sake__inner__left__label_row'>
+                                    <p class='individual-sake__inner__left__label_row_title'>Sake Type</p>
+                                    <p class='individual-sake__inner__left__label_row_content'>{{sake_type}}</p>
+                                </div>
+                                <div class='individual-sake__inner__left__label_row'>
+                                    <p class='individual-sake__inner__left__label_row_title'>Rice Type & Origin Area</p>
+                                    <p class='individual-sake__inner__left__label_row_content'>{{rice_type}}</p>
+                                </div>
+                                <div class='individual-sake__inner__left__label_row'>
+                                    <p class='individual-sake__inner__left__label_row_title'>Rice-polishing Ratio</p>
+                                    <p class='individual-sake__inner__left__label_row_content'>{{rice_ratio}}</p>
+                                </div>
+                                <div class='individual-sake__inner__left__label_row'>
+                                    <p class='individual-sake__inner__left__label_row_title'>Alcohol Percentage</p>
+                                    <p class='individual-sake__inner__left__label_row_content'>{{alcohol}}</p>
+                                </div>
+                                <div class='individual-sake__inner__left__label_row'>
+                                    <p class='individual-sake__inner__left__label_row_title'>SMV (Sake Meter Value)</p>
+                                    <p class='individual-sake__inner__left__label_row_content'>{{SMV}}</p>
+                                </div>
+                                <div class='individual-sake__inner__left__label_row'>
+                                    <p class='individual-sake__inner__left__label_row_title'>Production Area</p>
+                                    <p class='individual-sake__inner__left__label_row_content'>{{area}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='individual-sake__inner__right'>
+                            <div class='individual-sake__inner__right__detail'>
+                                <h2 class='individual-sake__inner__right__detail__name'>{{name}}</h2>
+                                <p class='individual-sake__inner__right__detail__maker'>{{maker}}</p>
+                                <div class='individual-sake__inner__right__detail__line'></div>
+                                <p class='individual-sake__inner__right__detail__content'>{{{br sake_detail}}}</p>
+                            </div>
+                            <div class='individual-sake__inner__right__about'>
+                                <p class='individual-sake__inner__right__about__title'>About the Sake brewery:</p>
+                                <p class='individual-sake__inner__right__about__content'>{{{br brewery_detail}}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a class='individual-sake__buy' target='_blank' href='{{buy}}'>Buy Sake</a>
+                {{/ifCond}}
+            {{/each}}
+        </script>
+    </body>
+</html>
