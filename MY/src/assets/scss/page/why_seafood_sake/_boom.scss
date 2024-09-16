@@ -24,11 +24,21 @@
 }
 
 @include mq(w-768) {
-    .page__selected-sake {
+    .page__why-sake {
         .selected-sake__boom {
             @include display-100sp;
             padding-top: 60px;
             padding-bottom: 30px;
+            &__inner {
+                @include display-100sp;
+                &__detail {
+                    font-size: unquote('clamp(1rem, 0.1477rem + 3.6364vw, 1.125rem)');
+                }
+                &__graphic {
+                    @include display-100sp;
+                    margin-top: 60px;
+                }
+            }
         }
     }
 }

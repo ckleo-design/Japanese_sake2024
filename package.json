@@ -6,6 +6,7 @@
     "scripts": {
         "compile:sass_sg": "node-sass SG/src/assets/scss/style.scss SG/src/assets/css/style.css -w",
         "compile:sass_my": "node-sass MY/src/assets/scss/style.scss MY/src/assets/css/style.css -w",
+        "compile:sass_all": "--parallel compile:sass_sg compile:sass_my",
         "watch": "live-server",
         "start": "npm-run-all --parallel watch compile:sass"
     },

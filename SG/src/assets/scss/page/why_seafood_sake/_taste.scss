@@ -37,12 +37,15 @@
 }
 
 @include mq(w-768) {
-    .page__selected-sake {
+    .page__why-sake {
         .selected-sake__taste {
             background-color: $color-light-brown;
             padding-top: 60px;
             padding-bottom: 60px;
-
+            &__title {
+                font-size: unquote('clamp(1.625rem, -0.5057rem + 9.0909vw, 1.9375rem)');
+                line-height: 120%;
+            }
             &__steps {
                 @include display-100sp;
                 @include display-flex(column, center, center);
@@ -50,10 +53,19 @@
 
                 &__item {
                     width: 80%;
+                    aspect-ratio: 1/1;
+                    background-color: $color-black;
+                    border-radius: 50%;
+                    padding: 20px 26px 20px;
                     display: grid;
-                    align-content: center;
-                    place-items: center;
-                    padding-top: 0;
+                    place-content: center;
+                    &__title {
+                        font-size: 32px;
+                    }
+
+                    &__detail {
+                        font-size: 14px;
+                    }
                 }
             }
         }

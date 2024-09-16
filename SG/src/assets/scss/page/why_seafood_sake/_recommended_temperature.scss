@@ -18,3 +18,23 @@
         }
     }
 }
+@include mq(w-768) {
+    .page__why-sake {
+        .why-sake__recommended_temperature {
+            padding-top: 60px;
+            padding-bottom: 60px;
+            &__title {
+                font-size: unquote('clamp(1.625rem, -0.5057rem + 9.0909vw, 1.9375rem)');
+                line-height: 120%;
+            }
+            &__inner {
+                @include display-100sp;
+                margin-top: 40px;
+                @include display-flex(column, center, center);
+                &__block {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

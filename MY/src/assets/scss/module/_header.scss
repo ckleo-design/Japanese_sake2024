@@ -15,8 +15,8 @@ header {
     }
 
     .header__inner {
-        width: 48%;
-        max-width: 660px;
+        width: 70%;
+        max-width: 760px;
         margin: 0 auto;
 
         &__about-campaign,
@@ -28,17 +28,11 @@ header {
                 @include text(clamp(1.25rem, 0.523rem + 3.64, 2rem), 100%, 0, 600, $font-garamond, $color-white);
                 text-decoration: none;
                 transition: opacity 0.3s;
+                margin-bottom: 14px;
 
                 &:hover {
                     opacity: 0.6;
                 }
-            }
-        }
-
-        &__restaurants,
-        &__selected-sake {
-            &__menu-title {
-                margin-bottom: 14px;
             }
 
             &__list__item {
@@ -50,25 +44,24 @@ header {
             }
         }
 
-        &__why-sake {
-            margin-top: 36px;
-        }
-
+        &__why-sake,
         &__restaurants {
             margin-top: 60px;
-
+            h3 {
+                @include text(18px, 100%, 0, 600, $font-poppins, $color-white);
+                margin: 20px 0 10px;
+            }
             &__list {
                 @include display-flex(row, space-between, flex-start);
                 flex-wrap: wrap;
                 row-gap: 20px;
 
                 &__item {
-                    width: 28%;
+                    width: 31%;
                     display: block;
-                    @include text(18px, 100%, 0, 400, $font-poppins, $color-white);
-
+                    @include text(16px, 160%, 0, 400, $font-poppins, $color-white);
                     &:nth-child(3n + 2) {
-                        width: 33%;
+                        width: 31%;
                     }
                 }
             }

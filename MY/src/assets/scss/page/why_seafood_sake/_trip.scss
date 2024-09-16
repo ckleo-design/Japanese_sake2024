@@ -44,3 +44,37 @@
         }
     }
 }
+
+@include mq(w-768) {
+    .page__why-sake {
+        .why-sake__trip {
+            padding-top: 60px;
+            padding-bottom: 60px;
+            &__title {
+                font-size: unquote('clamp(1.625rem, -0.5057rem + 9.0909vw, 1.9375rem)');
+                line-height: 120%;
+            }
+            &__intro {
+                font-size: unquote('clamp(1rem, 0.1477rem + 3.6364vw, 1.125rem)');
+            }
+            &__inner {
+                @include display-100sp;
+                @include display-flex(row, space-between, stretch);
+                row-gap: 20px;
+                margin-top: 50px;
+                &__block {
+                    width: 48%;
+
+                    iframe {
+                        width: 100%;
+                        height: auto;
+                        aspect-ratio: 16/9;
+                    }
+                    &__title {
+                        font-style: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

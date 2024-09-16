@@ -717,8 +717,8 @@ header {
     z-index: 99;
     overflow-y: auto; }
   header .header__inner {
-    width: 48%;
-    max-width: 660px;
+    width: 70%;
+    max-width: 760px;
     margin: 0 auto; }
     header .header__inner__about-campaign__menu-title, header .header__inner__why-sake__menu-title, header .header__inner__restaurants__menu-title, header .header__inner__selected-sake__menu-title {
       display: block;
@@ -729,37 +729,42 @@ header {
       font-family: "EB Garamond", serif;
       color: #ffffff;
       text-decoration: none;
-      transition: opacity 0.3s; }
+      transition: opacity 0.3s;
+      margin-bottom: 14px; }
       header .header__inner__about-campaign__menu-title:hover, header .header__inner__why-sake__menu-title:hover, header .header__inner__restaurants__menu-title:hover, header .header__inner__selected-sake__menu-title:hover {
         opacity: 0.6; }
-    header .header__inner__restaurants__menu-title, header .header__inner__selected-sake__menu-title {
-      margin-bottom: 14px; }
-    header .header__inner__restaurants__list__item, header .header__inner__selected-sake__list__item {
+    header .header__inner__about-campaign__list__item, header .header__inner__why-sake__list__item, header .header__inner__restaurants__list__item, header .header__inner__selected-sake__list__item {
       transition: opacity 0.3s; }
-      header .header__inner__restaurants__list__item:hover, header .header__inner__selected-sake__list__item:hover {
+      header .header__inner__about-campaign__list__item:hover, header .header__inner__why-sake__list__item:hover, header .header__inner__restaurants__list__item:hover, header .header__inner__selected-sake__list__item:hover {
         opacity: 0.6; }
-    header .header__inner__why-sake {
-      margin-top: 36px; }
-    header .header__inner__restaurants {
+    header .header__inner__why-sake, header .header__inner__restaurants {
       margin-top: 60px; }
-      header .header__inner__restaurants__list {
+      header .header__inner__why-sake h3, header .header__inner__restaurants h3 {
+        font-size: 18px;
+        line-height: 100%;
+        letter-spacing: 0;
+        font-weight: 600;
+        font-family: "Poppins", sans-serif;
+        color: #ffffff;
+        margin: 20px 0 10px; }
+      header .header__inner__why-sake__list, header .header__inner__restaurants__list {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: flex-start;
         flex-wrap: wrap;
         row-gap: 20px; }
-        header .header__inner__restaurants__list__item {
-          width: 28%;
+        header .header__inner__why-sake__list__item, header .header__inner__restaurants__list__item {
+          width: 31%;
           display: block;
-          font-size: 18px;
-          line-height: 100%;
+          font-size: 16px;
+          line-height: 160%;
           letter-spacing: 0;
           font-weight: 400;
           font-family: "Poppins", sans-serif;
           color: #ffffff; }
-          header .header__inner__restaurants__list__item:nth-child(3n + 2) {
-            width: 33%; }
+          header .header__inner__why-sake__list__item:nth-child(3n + 2), header .header__inner__restaurants__list__item:nth-child(3n + 2) {
+            width: 31%; }
     header .header__inner__selected-sake {
       margin-top: 80px; }
       header .header__inner__selected-sake__list {
@@ -1438,7 +1443,10 @@ footer .footer__inner {
   .page__why-sake .why-sake__detail__block__content {
     width: 100%; }
     .page__why-sake .why-sake__detail__block__content__title {
-      line-height: 120%; } }
+      font-size: clamp(1.625rem, -0.5057rem + 9.0909vw, 1.9375rem);
+      line-height: 120%; }
+    .page__why-sake .why-sake__detail__block__content__detail {
+      font-size: clamp(1rem, 0.1477rem + 3.6364vw, 1.125rem); } }
 
 .page__why-sake .selected-sake__grades {
   padding: 0 80px;
@@ -1490,23 +1498,26 @@ footer .footer__inner {
         text-align: center; }
 
 @media screen and (max-width: 768px) {
-  .page__selected-sake .selected-sake__grades {
+  .page__why-sake .selected-sake__grades {
     width: 100%;
     max-width: 100vw;
     margin: 0 auto;
     padding: 0 24px;
     padding-top: 60px;
     padding-bottom: 30px; }
-    .page__selected-sake .selected-sake__grades__table thead {
+    .page__why-sake .selected-sake__grades__title {
+      font-size: clamp(1.625rem, -0.5057rem + 9.0909vw, 1.9375rem);
+      line-height: 120%; }
+    .page__why-sake .selected-sake__grades__table thead {
       width: 100%; }
-      .page__selected-sake .selected-sake__grades__table thead tr th {
+      .page__why-sake .selected-sake__grades__table thead tr th {
         font-size: 20px; }
-        .page__selected-sake .selected-sake__grades__table thead tr th span {
+        .page__why-sake .selected-sake__grades__table thead tr th span {
           display: block;
           font-size: 18px; }
-    .page__selected-sake .selected-sake__grades__table tr {
+    .page__why-sake .selected-sake__grades__table tr {
       background-color: #ffffff; }
-      .page__selected-sake .selected-sake__grades__table tr td {
+      .page__why-sake .selected-sake__grades__table tr td {
         width: 33%;
         border: 1px solid #b8b9b9;
         padding: 20px 4px 18px;
@@ -1565,11 +1576,14 @@ footer .footer__inner {
         text-align: center; }
 
 @media screen and (max-width: 768px) {
-  .page__selected-sake .selected-sake__taste {
+  .page__why-sake .selected-sake__taste {
     background-color: #efe6d4;
     padding-top: 60px;
     padding-bottom: 60px; }
-    .page__selected-sake .selected-sake__taste__steps {
+    .page__why-sake .selected-sake__taste__title {
+      font-size: clamp(1.625rem, -0.5057rem + 9.0909vw, 1.9375rem);
+      line-height: 120%; }
+    .page__why-sake .selected-sake__taste__steps {
       width: 100%;
       max-width: 100vw;
       margin: 0 auto;
@@ -1579,12 +1593,18 @@ footer .footer__inner {
       justify-content: center;
       align-items: center;
       row-gap: 10px; }
-      .page__selected-sake .selected-sake__taste__steps__item {
+      .page__why-sake .selected-sake__taste__steps__item {
         width: 80%;
+        aspect-ratio: 1/1;
+        background-color: #000000;
+        border-radius: 50%;
+        padding: 20px 26px 20px;
         display: grid;
-        align-content: center;
-        place-items: center;
-        padding-top: 0; } }
+        place-content: center; }
+        .page__why-sake .selected-sake__taste__steps__item__title {
+          font-size: 32px; }
+        .page__why-sake .selected-sake__taste__steps__item__detail {
+          font-size: 14px; } }
 
 .page__why-sake .selected-sake__read {
   padding: 0 80px;
@@ -1641,24 +1661,26 @@ footer .footer__inner {
         width: 67%; }
 
 @media screen and (max-width: 768px) {
-  .page__selected-sake .selected-sake__read {
+  .page__why-sake .selected-sake__read {
     width: 100%;
     max-width: 100vw;
     margin: 0 auto;
     padding: 0 24px;
     padding-top: 80px;
     padding-bottom: 80px; }
-    .page__selected-sake .selected-sake__read__title {
-      margin-bottom: 40px; }
-    .page__selected-sake .selected-sake__read__group {
+    .page__why-sake .selected-sake__read__title {
+      margin-bottom: 40px;
+      font-size: clamp(1.625rem, -0.5057rem + 9.0909vw, 1.9375rem);
+      line-height: 120%; }
+    .page__why-sake .selected-sake__read__group {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       row-gap: 40px; }
-      .page__selected-sake .selected-sake__read__group__block {
+      .page__why-sake .selected-sake__read__group__block {
         width: 100%; }
-        .page__selected-sake .selected-sake__read__group__block__title {
+        .page__why-sake .selected-sake__read__group__block__title {
           margin-top: 40px;
           margin-bottom: 24px;
           font-size: 30px;
@@ -1701,13 +1723,26 @@ footer .footer__inner {
       margin-top: 100px; }
 
 @media screen and (max-width: 768px) {
-  .page__selected-sake .selected-sake__boom {
+  .page__why-sake .selected-sake__boom {
     width: 100%;
     max-width: 100vw;
     margin: 0 auto;
     padding: 0 24px;
     padding-top: 60px;
-    padding-bottom: 30px; } }
+    padding-bottom: 30px; }
+    .page__why-sake .selected-sake__boom__inner {
+      width: 100%;
+      max-width: 100vw;
+      margin: 0 auto;
+      padding: 0 24px; }
+      .page__why-sake .selected-sake__boom__inner__detail {
+        font-size: clamp(1rem, 0.1477rem + 3.6364vw, 1.125rem); }
+      .page__why-sake .selected-sake__boom__inner__graphic {
+        width: 100%;
+        max-width: 100vw;
+        margin: 0 auto;
+        padding: 0 24px;
+        margin-top: 60px; } }
 
 .page__why-sake .selected-sake__differences__first {
   padding-top: 100px;
@@ -1831,13 +1866,73 @@ footer .footer__inner {
       width: 30%; }
 
 @media screen and (max-width: 768px) {
-  .page__selected-sake .selected-sake__boom {
+  .page__why-sake .selected-sake__differences__first {
+    padding-top: 60px;
+    padding-bottom: 60px; }
+    .page__why-sake .selected-sake__differences__first__inner {
+      width: 100%;
+      max-width: 100vw;
+      margin: 0 auto;
+      padding: 0 24px; }
+      .page__why-sake .selected-sake__differences__first__inner__title {
+        font-size: clamp(1.625rem, -0.5057rem + 9.0909vw, 1.9375rem);
+        line-height: 120%; }
+      .page__why-sake .selected-sake__differences__first__inner__detail {
+        font-size: clamp(1rem, 0.1477rem + 3.6364vw, 1.125rem); }
+      .page__why-sake .selected-sake__differences__first__inner__block {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; }
+        .page__why-sake .selected-sake__differences__first__inner__block__img {
+          width: 100%;
+          margin-bottom: 20px; }
+        .page__why-sake .selected-sake__differences__first__inner__block__table {
+          width: 100%; }
+  .page__why-sake .selected-sake__differences__second {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #efe6d4; }
+    .page__why-sake .selected-sake__differences__second__inner {
+      width: 100%;
+      max-width: 100vw;
+      margin: 0 auto;
+      padding: 0 24px; }
+      .page__why-sake .selected-sake__differences__second__inner__title {
+        font-size: clamp(1.625rem, -0.5057rem + 9.0909vw, 1.9375rem);
+        line-height: 120%; }
+      .page__why-sake .selected-sake__differences__second__inner__detail {
+        font-size: clamp(1rem, 0.1477rem + 3.6364vw, 1.125rem); }
+      .page__why-sake .selected-sake__differences__second__inner__img {
+        width: 100%;
+        margin: 60px auto 0; }
+  .page__why-sake .selected-sake__differences__third {
     width: 100%;
     max-width: 100vw;
     margin: 0 auto;
     padding: 0 24px;
     padding-top: 60px;
-    padding-bottom: 30px; } }
+    padding-bottom: 60px; }
+    .page__why-sake .selected-sake__differences__third__title {
+      font-size: clamp(1.625rem, -0.5057rem + 9.0909vw, 1.9375rem);
+      line-height: 120%; }
+    .page__why-sake .selected-sake__differences__third__detail {
+      font-size: clamp(1rem, 0.1477rem + 3.6364vw, 1.125rem); }
+    .page__why-sake .selected-sake__differences__third__img {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      column-gap: auto;
+      row-gap: 20px;
+      width: 100%;
+      margin: 60px auto 0; }
+      .page__why-sake .selected-sake__differences__third__img img {
+        width: 100%; }
+        .page__why-sake .selected-sake__differences__third__img img:not(:nth-child(2)) {
+          height: 240px;
+          object-fit: cover; } }
 
 .page__why-sake .why-sake__temperature {
   padding-top: 100px;
@@ -1890,6 +1985,36 @@ footer .footer__inner {
       .page__why-sake .why-sake__temperature__inner__block__img {
         padding: 0 18px 14px 18px; }
 
+@media screen and (max-width: 768px) {
+  .page__why-sake .why-sake__temperature {
+    padding-top: 60px;
+    padding-bottom: 60px; }
+    .page__why-sake .why-sake__temperature__title {
+      font-size: clamp(1.625rem, -0.5057rem + 9.0909vw, 1.9375rem);
+      line-height: 120%; }
+    .page__why-sake .why-sake__temperature__inner {
+      width: 100%;
+      max-width: 100vw;
+      margin: 0 auto;
+      padding: 0 24px;
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      row-gap: 20px; }
+      .page__why-sake .why-sake__temperature__inner__block {
+        width: 100%;
+        border: 1px solid #b3b3b3;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: normal; }
+        .page__why-sake .why-sake__temperature__inner__block__title {
+          font-size: clamp(1rem, 0.1477rem + 3.6364vw, 1.125rem); }
+        .page__why-sake .why-sake__temperature__inner__block__list li {
+          font-size: clamp(1rem, 0.1477rem + 3.6364vw, 1.125rem); } }
+
 .page__why-sake .why-sake__recommended_temperature {
   background-color: #efe6d4;
   padding-top: 100px;
@@ -1914,6 +2039,27 @@ footer .footer__inner {
     align-items: stretch; }
     .page__why-sake .why-sake__recommended_temperature__inner__block {
       width: 48%; }
+
+@media screen and (max-width: 768px) {
+  .page__why-sake .why-sake__recommended_temperature {
+    padding-top: 60px;
+    padding-bottom: 60px; }
+    .page__why-sake .why-sake__recommended_temperature__title {
+      font-size: clamp(1.625rem, -0.5057rem + 9.0909vw, 1.9375rem);
+      line-height: 120%; }
+    .page__why-sake .why-sake__recommended_temperature__inner {
+      width: 100%;
+      max-width: 100vw;
+      margin: 0 auto;
+      padding: 0 24px;
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      row-gap: 20px; }
+      .page__why-sake .why-sake__recommended_temperature__inner__block {
+        width: 100%; } }
 
 .page__why-sake .why-sake__trip {
   padding-top: 100px;
@@ -1971,6 +2117,35 @@ footer .footer__inner {
           margin-left: 6px;
           width: 15px;
           height: 14px; }
+
+@media screen and (max-width: 768px) {
+  .page__why-sake .why-sake__trip {
+    padding-top: 60px;
+    padding-bottom: 60px; }
+    .page__why-sake .why-sake__trip__title {
+      font-size: clamp(1.625rem, -0.5057rem + 9.0909vw, 1.9375rem);
+      line-height: 120%; }
+    .page__why-sake .why-sake__trip__intro {
+      font-size: clamp(1rem, 0.1477rem + 3.6364vw, 1.125rem); }
+    .page__why-sake .why-sake__trip__inner {
+      width: 100%;
+      max-width: 100vw;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: stretch;
+      row-gap: 20px;
+      margin-top: 50px; }
+      .page__why-sake .why-sake__trip__inner__block {
+        width: 48%; }
+        .page__why-sake .why-sake__trip__inner__block iframe {
+          width: 100%;
+          height: auto;
+          aspect-ratio: 16/9; }
+        .page__why-sake .why-sake__trip__inner__block__title {
+          font-style: 20px; } }
 
 .page__restaurants .event__restaurants {
   background-color: #efe6d4;
@@ -2034,9 +2209,9 @@ footer .footer__inner {
       letter-spacing: 0;
       font-weight: 500;
       font-family: "EB Garamond", serif;
-      color: #1a0dab;
+      color: #999;
       text-align: center;
-      padding: 0 10px; }
+      padding: 0 30px; }
       .page__restaurants .event__restaurants__switch a:first-child {
         border-right: 2px solid #333; }
       .page__restaurants .event__restaurants__switch a.active {
@@ -2080,38 +2255,101 @@ footer .footer__inner {
 
 @media screen and (max-width: 768px) {
   .page__restaurants .event__restaurants {
-    padding-bottom: 60px; }
-    .page__restaurants .event__restaurants__period1, .page__restaurants .event__restaurants__period2 {
+    background-color: #efe6d4;
+    padding-top: 60px;
+    padding-bottom: 20px; }
+    .page__restaurants .event__restaurants__title {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      margin-bottom: 40px; }
+      .page__restaurants .event__restaurants__title h2 {
+        padding: 12px 30px;
+        font-size: 26px;
+        line-height: 100%;
+        letter-spacing: 0;
+        font-weight: 600;
+        font-family: "EB Garamond", serif;
+        color: #ffffff;
+        text-align: center;
+        width: fit-content;
+        background-color: #333333;
+        position: relative;
+        z-index: 10; }
+        .page__restaurants .event__restaurants__title h2::after, .page__restaurants .event__restaurants__title h2::before {
+          content: '';
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          background-color: #333;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-15px); }
+        .page__restaurants .event__restaurants__title h2::before {
+          left: -15px; }
+        .page__restaurants .event__restaurants__title h2::after {
+          right: -15px; }
+      .page__restaurants .event__restaurants__title__line {
+        width: 1280px;
+        height: 1px;
+        background-color: #333;
+        position: absolute;
+        top: 50%;
+        z-index: 0; }
+    .page__restaurants .event__restaurants__intro {
+      font-size: clamp(1.625rem, -0.5057rem + 9.0909vw, 1.9375rem);
+      line-height: 120%;
+      padding: 0 40px; }
+    .page__restaurants .event__restaurants__switch {
+      width: fit-content;
+      margin: 30px auto; }
+      .page__restaurants .event__restaurants__switch a {
+        text-decoration: none;
+        font-size: clamp(1.625rem, -0.5057rem + 9.0909vw, 1.9375rem);
+        text-align: center;
+        padding: 0 10px; }
+        .page__restaurants .event__restaurants__switch a:first-child {
+          border-right: 2px solid #333; }
+        .page__restaurants .event__restaurants__switch a.active {
+          color: #333; }
+    .page__restaurants .event__restaurants__inner {
       width: 100%;
       max-width: 100vw;
       margin: 0 auto;
-      padding: 0 24px; }
-      .page__restaurants .event__restaurants__period1__title h2, .page__restaurants .event__restaurants__period2__title h2 {
-        padding: 12px 30px;
-        font-size: 22px; }
-      .page__restaurants .event__restaurants__period1__title__line, .page__restaurants .event__restaurants__period2__title__line {
-        width: 100%; }
-      .page__restaurants .event__restaurants__period1__date, .page__restaurants .event__restaurants__period2__date {
-        margin: 16px auto;
-        font-size: 22px; }
-      .page__restaurants .event__restaurants__period1__list, .page__restaurants .event__restaurants__period2__list {
+      padding: 0 24px;
+      margin-top: 60px; }
+      .page__restaurants .event__restaurants__inner__list {
         padding: 0;
-        margin-top: 24px;
-        row-gap: 12px;
-        width: 100%; }
-        .page__restaurants .event__restaurants__period1__list__item, .page__restaurants .event__restaurants__period2__list__item {
-          width: 31%; }
-    .page__restaurants .event__restaurants .event__restaurants__period2 {
-      margin-top: 40px; }
-      .page__restaurants .event__restaurants .event__restaurants__period2__list__item {
-        margin-right: auto; }
-  .page__restaurants .restaurants__map {
-    width: 90%;
+        margin-top: 44px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        row-gap: 20px; }
+        .page__restaurants .event__restaurants__inner__list::after {
+          content: '';
+          box-sizing: border-box;
+          width: 48%;
+          max-width: 400px; }
+        .page__restaurants .event__restaurants__inner__list__item {
+          display: block;
+          width: 48%;
+          transition: opacity 0.3s; }
+          .page__restaurants .event__restaurants__inner__list__item:hover {
+            opacity: 0.75; }
+          .page__restaurants .event__restaurants__inner__list__item img {
+            width: 100%;
+            height: auto; }
+  .restaurants__map {
+    width: 80%;
     margin: 20px auto; }
-    .page__restaurants .restaurants__map iframe {
+    .restaurants__map iframe {
       width: 100%;
       height: auto;
-      aspect-ratio: 3/5; } }
+      aspect-ratio: 5/4; } }
 
 .individual-restaurant__firstview__logo {
   display: block;

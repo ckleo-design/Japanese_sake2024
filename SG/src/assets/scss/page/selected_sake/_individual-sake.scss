@@ -98,9 +98,9 @@
         background-color: #333333;
         @include text(30px, 100%, 0, 500, $font-garamond, $color-white);
         text-align: center;
-        padding: 16px 100px;
-        width: 60%;
-        max-width: 600px;
+        padding: 16px 30px;
+        width: 80%;
+        max-width: 700px;
         display: block;
         margin: 60px auto 0;
         border-radius: 34px;
@@ -189,7 +189,7 @@
 
         &__buy {
             @include text(26px, 100%, 0, 500, $font-garamond, $color-white);
-            padding: 16px 10px;
+            padding: 16px 6px;
             width: 90%;
             max-width: auto;
 
