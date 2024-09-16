@@ -69,7 +69,11 @@
                     width: 100%;
 
                     &__title {
+                        font-size: unquote('clamp(1.625rem, -0.5057rem + 9.0909vw, 1.9375rem)');
                         line-height: 120%;
+                    }
+                    &__detail {
+                        font-size: unquote('clamp(1rem, 0.1477rem + 3.6364vw, 1.125rem)');
                     }
                 }
             }

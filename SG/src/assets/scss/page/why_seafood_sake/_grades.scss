@@ -50,12 +50,15 @@
 }
 
 @include mq(w-768) {
-    .page__selected-sake {
+    .page__why-sake {
         .selected-sake__grades {
             @include display-100sp;
             padding-top: 60px;
             padding-bottom: 30px;
-
+            &__title {
+                font-size: unquote('clamp(1.625rem, -0.5057rem + 9.0909vw, 1.9375rem)');
+                line-height: 120%;
+            }
             &__table {
                 thead {
                     width: 100%;

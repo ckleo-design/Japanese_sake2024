@@ -58,9 +58,9 @@
             margin: 30px auto;
             a {
                 text-decoration: none;
-                @include text(33px, 100%, 0, 500, $font-garamond, #1a0dab);
+                @include text(33px, 100%, 0, 500, $font-garamond, #999);
                 text-align: center;
-                padding: 0 10px;
+                padding: 0 30px;
                 &:first-child {
                     border-right: 2px solid #333;
                 }
@@ -116,58 +116,117 @@
 @include mq(w-768) {
     .page__restaurants {
         .event__restaurants {
-            padding-bottom: 60px;
+            background-color: $color-light-brown;
+            padding-top: 60px;
+            padding-bottom: 20px;
 
-            &__period1,
-            &__period2 {
-                @include display-100sp;
+            &__title {
+                @include display-flex(column, center, center);
+                position: relative;
+                margin-bottom: 40px;
 
-                &__title {
-                    h2 {
-                        padding: 12px 30px;
-                        font-size: 22px;
+                h2 {
+                    padding: 12px 30px;
+                    @include text(26px, 100%, 0, 600, $font-garamond, $color-white);
+                    text-align: center;
+                    width: fit-content;
+                    background-color: #333333;
+                    position: relative;
+                    z-index: 10;
+
+                    &::after,
+                    &::before {
+                        content: '';
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 50%;
+                        background-color: #333;
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-15px);
                     }
 
-                    &__line {
-                        width: 100%;
+                    &::before {
+                        left: -15px;
+                    }
+
+                    &::after {
+                        right: -15px;
                     }
                 }
 
-                &__date {
-                    margin: 16px auto;
-                    font-size: 22px;
-                }
-
-                &__list {
-                    padding: 0;
-                    margin-top: 24px;
-                    row-gap: 12px;
-                    width: 100%;
-
-                    &__item {
-                        width: 31%;
-                    }
+                &__line {
+                    width: 1280px;
+                    height: 1px;
+                    background-color: #333;
+                    position: absolute;
+                    top: 50%;
+                    z-index: 0;
                 }
             }
 
-            .event__restaurants__period2 {
-                margin-top: 40px;
+            &__intro {
+                font-size: unquote('clamp(1.625rem, -0.5057rem + 9.0909vw, 1.9375rem)');
+                line-height: 120%;
+                padding: 0 40px;
+            }
+            &__switch {
+                width: fit-content;
+                margin: 30px auto;
+                a {
+                    text-decoration: none;
+                    font-size: unquote('clamp(1.625rem, -0.5057rem + 9.0909vw, 1.9375rem)');
+                    text-align: center;
+                    padding: 0 10px;
+                    &:first-child {
+                        border-right: 2px solid #333;
+                    }
+                    &.active {
+                        color: #333;
+                    }
+                }
+            }
+            &__inner {
+                @include display-100sp;
+                margin-top: 60px;
+                &__list {
+                    padding: 0;
+                    margin-top: 44px;
+                    @include display-flex(row, space-between, flex-start);
+                    flex-wrap: wrap;
+                    row-gap: 20px;
+                    &::after {
+                        content: '';
+                        box-sizing: border-box;
+                        width: 48%;
+                        max-width: 400px;
+                    }
 
-                &__list__item {
-                    margin-right: auto;
+                    &__item {
+                        display: block;
+                        width: 48%;
+                        transition: opacity 0.3s;
+                        &:hover {
+                            opacity: 0.75;
+                        }
+                        img {
+                            width: 100%;
+                            height: auto;
+                        }
+                    }
                 }
             }
         }
+    }
 
-        .restaurants__map {
-            width: 90%;
-            margin: 20px auto;
+    .restaurants__map {
+        width: 80%;
+        margin: 20px auto;
 
-            iframe {
-                width: 100%;
-                height: auto;
-                aspect-ratio: 3/5;
-            }
+        iframe {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 5/4;
         }
     }
 }

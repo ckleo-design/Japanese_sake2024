@@ -102,11 +102,80 @@
 }
 
 @include mq(w-768) {
-    .page__selected-sake {
-        .selected-sake__boom {
-            @include display-100sp;
-            padding-top: 60px;
-            padding-bottom: 30px;
+    .page__why-sake {
+        .selected-sake__differences {
+            &__first {
+                padding-top: 60px;
+                padding-bottom: 60px;
+                &__inner {
+                    @include display-100sp;
+                    &__title {
+                        font-size: unquote('clamp(1.625rem, -0.5057rem + 9.0909vw, 1.9375rem)');
+                        line-height: 120%;
+                    }
+                    &__detail {
+                        font-size: unquote('clamp(1rem, 0.1477rem + 3.6364vw, 1.125rem)');
+                    }
+                    &__block {
+                        margin-top: 40px;
+                        @include display-flex(column, center, center);
+                        &__img {
+                            width: 100%;
+                            margin-bottom: 20px;
+                        }
+                        &__table {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            &__second {
+                padding-top: 60px;
+                padding-bottom: 60px;
+                background-color: #efe6d4;
+                &__inner {
+                    @include display-100sp;
+
+                    &__title {
+                        font-size: unquote('clamp(1.625rem, -0.5057rem + 9.0909vw, 1.9375rem)');
+                        line-height: 120%;
+                    }
+                    &__detail {
+                        font-size: unquote('clamp(1rem, 0.1477rem + 3.6364vw, 1.125rem)');
+                    }
+                    &__img {
+                        width: 100%;
+                        margin: 60px auto 0;
+                    }
+                }
+            }
+            &__third {
+                @include display-100sp;
+                padding-top: 60px;
+                padding-bottom: 60px;
+
+                &__title {
+                    font-size: unquote('clamp(1.625rem, -0.5057rem + 9.0909vw, 1.9375rem)');
+                    line-height: 120%;
+                }
+                &__detail {
+                    font-size: unquote('clamp(1rem, 0.1477rem + 3.6364vw, 1.125rem)');
+                }
+                &__img {
+                    @include display-flex(column, center, center);
+                    column-gap: auto;
+                    row-gap: 20px;
+                    width: 100%;
+                    margin: 60px auto 0;
+                    img {
+                        width: 100%;
+                        &:not(:nth-child(2)) {
+                            height: 240px;
+                            object-fit: cover;
+                        }
+                    }
+                }
+            }
         }
     }
 }
