@@ -2,7 +2,7 @@
     .event__restaurants {
         background-color: $color-light-brown;
         padding-top: 60px;
-        padding-bottom: 160px;
+        padding-bottom: 30px;
 
         &__title {
             @include display-flex(column, center, center);
@@ -102,7 +102,7 @@
         .event__restaurants {
             background-color: $color-light-brown;
             padding-top: 60px;
-            padding-bottom: 160px;
+            padding-bottom: 30px;
 
             &__title {
                 @include display-flex(column, center, center);
@@ -194,7 +194,7 @@
         iframe {
             width: 100%;
             height: auto;
-            aspect-ratio: 16/9;
+            aspect-ratio: 5/4;
         }
     }
 }

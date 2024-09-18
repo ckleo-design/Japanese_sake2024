@@ -299,7 +299,7 @@ window.onload = function () {
                 alcohol: `12%`,
                 SMV: `N/A`,
                 area: `Gunma`,
-                buy: `https://www.oriharasg.com/`
+                buy: `https://www.oriharasg.com/product-page/macho-sparkling`
             },
             {
                 image: 'Nito-Junmai-Daiginjo-Omachi-55',
@@ -494,7 +494,7 @@ window.onload = function () {
                 alcohol: `16%`,
                 SMV: `+3`,
                 area: `Yamagata`,
-                buy: `https://www.oriharasg.com/`
+                buy: `https://www.oriharasg.com/product-page/shuho-jg-shiki-no-matsuri`
             },
             {
                 image: 'Takizawa-Junmai-Ginjo',
@@ -509,7 +509,7 @@ window.onload = function () {
                 alcohol: `16%`,
                 SMV: `±0`,
                 area: `Nagano`,
-                buy: `https://www.oriharasg.com/`
+                buy: `https://www.oriharasg.com/product-page/takizawa-jg`
             },
             {
                 image: 'Suigei-Junmai-Ginjo-Koiku-No54',

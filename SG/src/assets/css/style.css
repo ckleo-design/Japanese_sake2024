@@ -2154,7 +2154,7 @@ footer .footer__inner {
 .page__restaurants .event__restaurants {
   background-color: #efe6d4;
   padding-top: 60px;
-  padding-bottom: 160px; }
+  padding-bottom: 30px; }
   .page__restaurants .event__restaurants__title {
     display: flex;
     flex-direction: column;
@@ -2244,7 +2244,7 @@ footer .footer__inner {
   .page__restaurants .event__restaurants {
     background-color: #efe6d4;
     padding-top: 60px;
-    padding-bottom: 160px; }
+    padding-bottom: 30px; }
     .page__restaurants .event__restaurants__title {
       display: flex;
       flex-direction: column;
@@ -2324,7 +2324,7 @@ footer .footer__inner {
     .restaurants__map iframe {
       width: 100%;
       height: auto;
-      aspect-ratio: 16/9; } }
+      aspect-ratio: 5/4; } }
 
 .individual-restaurant__firstview__logo {
   display: block;

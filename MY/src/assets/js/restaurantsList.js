@@ -39,13 +39,13 @@ window.onload = function () {
                 restaurants_img: `Furusato-Japanese-Restaurant_shop`,
                 restaurants_category: `TRADITIONAL JAPANESE`,
                 restaurants_address: `53, Jalan Kuning 2, Taman Pelangi 80400 Johor Bahru, Johor, Malaysia`,
-                restaurants_tel: `Tel:  +60 7-331 4428`,
+                restaurants_tel: `Tel: +6019-7732 086`,
                 restaurants_homepage: `https://www.facebook.com/FurusatoJapaneseRestaurant/`,
                 restaurants_detail: `Furusato Japanese Restaurant, located at 53 Jalan Kuning 2, Taman Pelangi in Johor Bahru, Malaysia, has been a popular dining spot for over two decades. Known for its authentic Japanese cuisine, including sushi, sashimi, and traditional dishes, Furusato uses fresh ingredients, with some seafood and A5 Wagyu beef flown in from Japan. \n\nThe restaurant offers a cozy atmosphere, quality food, good service, and reasonable prices, attracting both locals and international visitors seeking genuine Japanese flavors.`,
-                chief_name: `Chef Lee Yap Sing`,
-                chief_detail: `With over 30 years of culinary experience, Chef Lee Yap Sing has transformed Furusato's menu after joining the restaurant in the early 2000s. Known for his deep knowledge of regional and seasonal seafood and produce, he whips up standout dishes for locals and international guests. As Executive Chef, he oversees three kitchens and leads a team of over 60 staff, continuously developing new menus to meet evolving tastes.`,
+                chief_name: `Chef LEE Yap Sing`,
+                chief_detail: `With over 30 years of culinary expertise, Chef Lee Yap Sing has transformed Furusato's menu after joining the restaurant in the early 2000s. Known for his deep knowledge of regional and seasonal seafood and produce, he whips up standout dishes for locals and international guests. As Executive Chef of Furusato and Shokudo Japanese Cuisine Group of Restaurants, he leads a team of over 60 staff, continuously developing new menus to meet evolving tastes.`,
                 chief_img: `Furusato-Japanese-Restaurant_chief`,
-                restaurant_reservation: `https://bit.ly/FurusatoBooking`
+                restaurant_reservation: `https://wa.me/60197732086?text=Hi,+I+would+like+to+make+a+reservation`
             },
             {
                 place: `kuala`,

@@ -179,7 +179,7 @@ window.onload = function () {
                 restaurants_address: `333A Orchard Road, #01-16/17 Mandarin Gallery, Singapore 238897`,
                 restaurants_tel: `Tel:  +65 8382 6200`,
                 restaurants_homepage: `https://www.ladoro.sg/`,
-                restaurants_detail: `Nestled discreetly within Mandarin Gallery, La D'Oro invites discerning epicureans to embark on a culinary odyssey that harmoniously blends the essence of Italy and Japan. Under the guidance of Chef Yohhei Sasaki, whose mastery spans both cuisines, each degustation menu promises a tantalising Italian-Japanese fusion experience. This artistry of omakase marries the flavours of Italy in every meticulously crafted dish, ensuring a dining adventure like no other. `,
+                restaurants_detail: `Nestled discreetly within Mandarin Gallery, La D'Oro invites discerning epicureans to embark on a culinary odyssey that harmoniously blends the essence of Italy and Japan. Under the guidance of Chef Yohhei Sasaki, La D'Oro offers an extensive and captivating culinary journey, designed to cater to a wide spectrum of preferences.`,
                 chief_name: `Head Chef  Yohhei Sasaki`,
                 chief_detail: `Born in Aomori Prefecture, Chef Yohhei has worked for hotels and renowned restaurants across Japan, but his culinary curiosity was unfulfilled. That was when he decided to move to Italy to work at establishments like Arnolfo in Tuscany (two Michelin Star) and Da Vittorio in Lombardia (three Michelin Star). After his time in Europe, Chef Yohhei decided to head back to Asia to pave his own career objectives – to promote Japan’s Tohoku region produce with his knowledge in Italian cuisine. `,
                 chief_img: `La-DOro_chief_img`,
@@ -271,7 +271,7 @@ window.onload = function () {
             },
             //NOU
             {
-                alink: ``,
+                alink: `NOU`,
                 logo: `NOU_logo`,
                 header_logo: `NOU_header-logo`,
                 name: `NOU`,
@@ -559,7 +559,7 @@ window.onload = function () {
                 pair1_img: `Xiao-Ya-Tou_pair1_img`,
                 pair1_sake: `Fudoh Junmai Ginjo`,
                 pair1_food: `Scallop & Corn Fritter`,
-                pair1_detail: `The fritter is made of Hokkaido scallops - known for their plump, juicy texture and naturally sweet flavour - aoniri and corn. The curry powder adds a warm, aromatic spice that contrasts with the sweetness of the scallops and corn. This dish pairs beautifully with the smooth, fruity Junmai Ginjo sake.`,
+                pair1_detail: `The fritter is made of Hokkaido scallops - known for their plump, juicy texture and naturally sweet flavour - aonori and corn. The curry powder adds a warm, aromatic spice that contrasts with the sweetness of the scallops and corn. This dish pairs beautifully with the smooth, fruity Junmai Ginjo sake.`,
                 pair1_link: `Fudoh-Junmai-Ginjo`,
                 pair2_img: `Xiao-Ya-Tou_pair2_img`,
                 pair2_sake: `Hyakujuro Junmai Daiginjo Black Face`,
