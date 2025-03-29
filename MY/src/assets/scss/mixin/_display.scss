@@ -36,9 +36,10 @@
     padding: 0 24px;
 }
 
-$breakpoints: ("w-400": "screen and (max-width: 400px)",
-    "w-768": "screen and (max-width: 768px)",
-    "w-1280": "screen and (max-width: 1280px)",
+$breakpoints: (
+    'w-400': 'screen and (max-width: 400px)',
+    'w-768': 'screen and (max-width: 768px)',
+    'w-1280': 'screen and (max-width: 1280px)'
 ) !default;
 
 @mixin mq($breakpoint) {

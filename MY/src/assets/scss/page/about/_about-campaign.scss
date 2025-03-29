@@ -39,7 +39,7 @@
                 width: 100%;
 
                 span {
-                    @include text(18px, 100%, 0, 400, $font-garamond, $color-white);
+                    @include text(18px, 100%, 0, 400, $font-garamond, $color-black);
                 }
             }
 

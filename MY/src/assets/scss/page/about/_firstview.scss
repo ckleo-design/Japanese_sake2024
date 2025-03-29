@@ -25,6 +25,7 @@
     .firstview {
         &__inner {
             @include display-flex(column, center, center);
+            row-gap: 50px;
 
             &__logo {
                 width: 80%;
