@@ -26,26 +26,5 @@
 }
 
 @include mq(w-768) {
-    .about-campaign {
-        padding-top: 80px;
-        padding-bottom: 74px;
 
-        &__inner {
-            @include display-100sp;
-            @include display-flex(column, center, center);
-
-            &__title {
-                margin-bottom: 40px;
-                width: 100%;
-
-                span {
-                    @include text(18px, 100%, 0, 400, $font-garamond, $color-black);
-                }
-            }
-
-            &__detail {
-                width: 100%;
-            }
-        }
-    }
 }

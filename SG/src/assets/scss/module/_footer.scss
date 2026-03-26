@@ -39,7 +39,11 @@ footer {
                     text-decoration: none;
 
                     p {
-                        @include text(36px, 100%, 0, 500, $font-garamond, $color-white);
+                        font-size: 36px;
+                        line-height: 100%;
+                        font-weight: 500;
+                        font-family: $font-garamond;
+                        color: $color-white;
                     }
 
                     img {
@@ -94,7 +98,11 @@ footer {
 
                     a {
                         p {
-                            @include text(36px, 100%, 0, 500, $font-garamond, $color-white);
+                            font-size: 36px;
+                            line-height: 100%;
+                            font-weight: 500;
+                            font-family: $font-garamond;
+                            color: $color-white;
                             text-align: center;
                         }
 
